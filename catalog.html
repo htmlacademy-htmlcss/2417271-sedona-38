@@ -22,15 +22,22 @@
           </li>
         </ul>
       </nav>
-      <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="search-field">Поиск по сайту</label>
-        <input type="text" name="search" id="search-field">
-        <input type="submit" value="Найти">
-      </form>
-      <button class="btn-icon btn-like">
-        <span class="visually-hidden">Мне нравится</span>
-      </button>
-      <a class="btn btn-modal" href="#">Хочу сюда!</a>
+      <ul class="user-navigation">
+        <li class="user-navigation-item">
+          <a class="btn-icon btn-search" href="#">
+            <span class="visually-hidden">Поиск по сайту</span>
+          </a>
+        </li>
+        <li class="user-navigation-item">
+          <a class="btn-icon btn-favorite" href="#">
+            <span class="visually-hidden">Избранное</span>
+            <span class="favorite-list-counter">12</span>
+          </a>
+        </li>
+        <li class="user-navigation-item">
+          <a class="btn btn-modal" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
     </header>
     <main class="catalog-main">
       <header class="catalog-main-header">
@@ -96,6 +103,7 @@
             </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-group-title">Стоимость, ₽:</legend>
+              <!-- от и до - лэйблы -->
               <label for="min-price"  class="control">Цена от</label>
               <input type="text" name="min-price" id="min-price" placeholder="от" class="control-input">
               <label for="max-price"  class="control">Цена до</label>
