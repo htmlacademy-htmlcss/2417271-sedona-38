@@ -85,7 +85,7 @@
               <ul class="catalog-filter-group-setting">
                 <li>
                   <label class="control">
-                    <input type="radio" name="group-setting" value="hotel" class="control-input">
+                    <input type="radio" name="group-setting" value="hotel" class="control-input" checked>
                     Гостиница
                   </label>
                 </li>
@@ -105,11 +105,10 @@
             </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-group-title">Стоимость, ₽:</legend>
-              <!-- от и до - лэйблы -->
-              <label for="min-price" class="control">Цена от</label>
-              <input type="text" name="min-price" id="min-price" placeholder="от" class="control-input">
-              <label for="max-price" class="control">Цена до</label>
-              <input type="text" name="max-price" id="max-price" placeholder="до" class="control-input">
+              <label for="min-price" class="control">от</label>
+              <input type="number" name="min-price" id="min-price" class="control-input">
+              <label for="max-price" class="control">до</label>
+              <input type="number" name="max-price" id="max-price" class="control-input">
               <!-- здесь будет бегунок для диапазона цен -->
             </fieldset>
             <input type="submit" value="Применить">
