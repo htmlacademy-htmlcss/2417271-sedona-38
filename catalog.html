@@ -22,7 +22,7 @@
           </li>
         </ul>
       </nav>
-      <form action="https://echo.htmlacademy.ru/" method="post">
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
         <label for="search-field">Поиск по сайту</label>
         <input type="text" name="search" id="search-field">
         <input type="submit" value="Найти">
@@ -75,20 +75,20 @@
               <legend class="catalog-filter-group-title">Тип жилья:</legend>
               <ul class="catalog-filter-group-setting">
                 <li>
-                  <label>
-                    <input type="radio" name="group-setting" value="hotel">
+                  <label class="control">
+                    <input type="radio" name="group-setting" value="hotel" class="control-input">
                     Гостиница
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="radio" name="group-setting" value="motel">
+                  <label class="control">
+                    <input type="radio" name="group-setting" value="motel" class="control-input">
                     Мотель
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="radio" name="group-setting" value="apartments">
+                  <label class="control">
+                    <input type="radio" name="group-setting" value="apartments" class="control-input">
                     Апартаменты
                   </label>
                 </li>
@@ -96,10 +96,10 @@
             </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-group-title">Стоимость, ₽:</legend>
-              <label for="min-price">Цена от</label>
-              <input type="text" name="min-price" id="min-price" placeholder="от">
-              <label for="max-price">Цена до</label>
-              <input type="text" name="max-price" id="max-price" placeholder="до">
+              <label for="min-price"  class="control">Цена от</label>
+              <input type="text" name="min-price" id="min-price" placeholder="от" class="control-input">
+              <label for="max-price"  class="control">Цена до</label>
+              <input type="text" name="max-price" id="max-price" placeholder="до" class="control-input">
               <!-- здесь будет бегунок для диапазона цен -->
             </fieldset>
             <input type="submit" value="Применить">
@@ -117,17 +117,17 @@
       </select>
       <ul class="view-list">
         <li class="view-list-item">
-          <button>
+          <button class="btn-icon btn-view btn-view-active">
             <span class="visually-hidden">Таблица</span>
           </button>
         </li>
         <li class="view-list-item">
-          <button>
+          <button class="btn-icon btn-view">
             <span class="visually-hidden">Таблица с описанием</span>
           </button>
         </li>
         <li class="view-list-item">
-          <button>
+          <button class="btn-icon btn-view">
             <span class="visually-hidden">Список с описание</span>
           </button>
         </li>
@@ -216,9 +216,9 @@
       <section class="subscribe">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="subscribe-field">Ваш e-mail</label>
-          <input type="text" name="subscribe-mail" id="subscribe-field" placeholder="Ваш e-mail">
+          <input type="email" name="subscribe-mail" id="subscribe-field" placeholder="Ваш e-mail">
           <input type="submit" value="Подписаться">
         </form>
       </section>
