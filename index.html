@@ -22,7 +22,7 @@
           </li>
         </ul>
       </nav>
-      <form action="https://echo.htmlacademy.ru/" method="post">
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
         <label for="search-field">Поиск по сайту</label>
         <input type="text" name="search" id="search-field">
         <input type="submit" value="Найти">
@@ -101,9 +101,9 @@
       <section class="subscribe">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
-          <label for="subscribe-field">Ваш e-mail</label>
-          <input type="text" name="subscribe-mail" id="subscribe-field" placeholder="Ваш e-mail">
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="subscribe-field">Ваш e-mail</label>
+          <input type="email" name="subscribe-mail" id="subscribe-field" placeholder="Ваш e-mail">
           <input type="submit" value="Подписаться">
         </form>
       </section>
@@ -135,7 +135,9 @@
     </section>
     <section class="about-made">
       <h2 class="visually-hidden">Сделано в 'html academy'</h2>
-      <a class="about-made-contacts" href="https://htmlacademy.ru/"><img src="" alt="Логотип html academy"></a>
+      <a class="about-made-contacts" href="https://htmlacademy.ru/">
+        <img src="" alt="Логотип html academy">
+      </a>
     </section>
     </footer>
   </body>
