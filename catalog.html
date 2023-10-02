@@ -4,11 +4,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
   </head>
 
   <body>
     <header class="page-header">
-      <a class="logo" href="index.html">
+      <a href="index.html" aria-current="page" class="logo">
         <img src="images/logo.svg" width="140" height="70" alt="Логотип городка Седона">
       </a>
       <nav class="page-navigation">
@@ -23,23 +25,23 @@
             <a href="catalog.html" aria-current="page" class="navigation-item active-nav-item">Гостиницы</a>
           </li>
         </ul>
+        <ul class="user-navigation">
+          <li class="user-navigation-item">
+            <a class="btn-icon btn-search" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="btn-icon btn-favorite" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="favorite-list-counter">12</span>
+            </a>
+          </li>
+          <li class="user-navigation-item special-btn">
+            <a class="btn btn-modal" href="#">Хочу сюда!</a>
+          </li>
+        </ul>
       </nav>
-      <ul class="user-navigation">
-        <li class="user-navigation-item">
-          <a class="btn-icon btn-search" href="#">
-            <span class="visually-hidden">Поиск по сайту</span>
-          </a>
-        </li>
-        <li class="user-navigation-item">
-          <a class="btn-icon btn-favorite" href="#">
-            <span class="visually-hidden">Избранное</span>
-            <span class="favorite-list-counter">12</span>
-          </a>
-        </li>
-        <li class="user-navigation-item">
-          <a class="btn btn-modal" href="#">Хочу сюда!</a>
-        </li>
-      </ul>
     </header>
     <main class="catalog-main">
       <header class="catalog-main-header">

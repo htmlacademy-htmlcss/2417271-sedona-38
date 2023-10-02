@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format(".woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format(".woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333;
+  background-color: #FFF;
+}
+
+/* ---header--- */
+.page-navigation {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+}
+
+.navigation-list, .user-navigation {
+  list-style: none;
+}
+
+.page-navigation a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.user-navigation .special-btn {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: #756157;
+}
+
+.special-btn a {
+  color: inherit;
+}
+
+/* ---main-index--- */
+.main-header {
+  text-align: center;
+  background-color: #82B3D3;
+  background-image: url(../images/index-main-header-figure.svg), url(../images/index-main-header-background.jpg);
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.advantages, .adv-service {
+  text-align: center;
+}
+
+.slogan {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.adv-list, .adv-service-list {
+  font-size: 18px;
+  line-height: 21px;
+  list-style: none;
+}
+
+.adv-list h3, .adv-service-list h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.adv-type-1 h3, .adv-type-1 p {
+  color: #FFF;
+}
+.adv-type-1 {
+  background-color: #82B3D3;
+}
+
+.adv-type-2 {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.adv-type-3 {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.adv-service-home {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+
+.adv-service-present {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.booking {
+  text-align: center;
+}
+
+.booking h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.btn-catalog {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #756157;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.subscribe h2 {
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+/* subscribe extra-style */
+.extra-subscribe {
+  color: #FFF;
+  background-color: #82B3D3;
+  background-image: url(../images/index-subscribe-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.extra-subscribe h2 {
+  color: #FFF;
+}
+
+/* ---footer---  */
+.page-footer {
+  color: #000;
+  text-align: center;
+}
+
+.social-list {
+  list-style: none;
+}
+
+
+.footer-contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+}
