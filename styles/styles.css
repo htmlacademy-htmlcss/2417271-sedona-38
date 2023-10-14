@@ -13,6 +13,9 @@
   src: url("../fonts/ptsans-700.woff2") format(".woff2");
   font-display: swap;
 }
+html {
+  height: 100%;
+}
 
 body {
   font-family: "PT Sans", sans-serif;
@@ -21,6 +24,7 @@ body {
   color: #333333;
   background-color: #F2F2F2;
   margin: 0 auto;
+  height: 100%;
 }
 
 .page-container {
@@ -28,6 +32,9 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .button,
@@ -80,6 +87,10 @@ body {
 }
 
 /* ---main-index--- */
+.main-flex {
+  flex-grow: 1;
+}
+
 .main-header {
   text-align: center;
   background-color: #82B3D3;
