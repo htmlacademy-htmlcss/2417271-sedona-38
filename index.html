@@ -16,24 +16,24 @@
         </a>
         <nav class="page-navigation">
           <ul class="navigation-list">
-            <li>
-              <a href="index.html" aria-current="page" class="navigation-item active-nav-item">Главная</a>
+            <li class="navigation-item">
+              <a href="index.html" aria-current="page" class="navigation-link active-nav-item">Главная</a>
             </li>
-            <li>
-              <a href="#" class="navigation-item">О Седоне</a>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">О Седоне</a>
             </li>
-            <li>
-              <a href="catalog.html" class="navigation-item">Гостиницы</a>
+            <li class="navigation-item">
+              <a href="catalog.html" class="navigation-link">Гостиницы</a>
             </li>
           </ul>
           <ul class="user-navigation">
-            <li class="user-navigation-item">
-              <a class="btn-icon btn-search" href="#">
+            <li class="user-navigation-item icon-item">
+              <a class="nav-btn-icon btn-search" href="#">
                 <span class="visually-hidden">Поиск по сайту</span>
               </a>
             </li>
-            <li class="user-navigation-item">
-              <a class="btn-icon btn-favorite" href="#">
+            <li class="user-navigation-item icon-item">
+              <a class="nav-btn-icon btn-favorite" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="favorite-list-counter">12</span>
               </a>
@@ -51,9 +51,11 @@
             alt="Welcome to the gorgeous Sedona - 'Because the Grand Canyon sucks!">
         </header>
         <section class="advantages lead-adv">
-          <h2 class="visually-hidden">Преимущества</h2>
-          <p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <div class="lead-adv-text-container">
+            <h2 class="visually-hidden">Преимущества</h2>
+            <p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+            <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
           <ul class="adv-list lead-adv-list">
             <li class="adv-item adv-dark-bg">
               <h3>Настоящий городок</h3>
@@ -80,9 +82,11 @@
           </ul>
         </section>
         <section class="advantages adv-service">
-          <h2 class="visually-hidden">Услуги</h2>
-          <p class="slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-          <p>Опытный персонал и качественное обслуживание!</p>
+          <div class="adv-service-text-container">
+            <h2 class="visually-hidden">Услуги</h2>
+            <p class="slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+            <p>Опытный персонал и качественное обслуживание!</p>
+          </div>
           <ul class="adv-list adv-service-list">
             <li class="adv-service-item adv-service-home">
               <h3>Жильё</h3>
@@ -100,7 +104,7 @@
         </section>
         <section class="booking">
           <h2>Заинтересовались?</h2>
-          <p>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p>Укажите предполагаемые даты поездки,</br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a href="catalog.html" class="btn btn-catalog">Поиск гостиницы в Седоне</a>
         </section>
         <section class="subscribe extra-subscribe">
@@ -108,7 +112,7 @@
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-field">Ваш e-mail</label>
-            <input type="email" name="subscribe-mail" id="subscribe-field" placeholder="Ваш e-mail">
+            <input class="subscribe-form-input" type="email" name="subscribe-mail" id="subscribe-field" placeholder="Ваш e-mail">
             <input class="button subscribe-submit-btn" type="submit" value="Подписаться">
           </form>
         </section>
