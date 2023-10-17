@@ -43,7 +43,7 @@ body {
   cursor: pointer;
 }
 
-/* чтобы спрятать элементы, задуманные скрытыми */
+/* чтобы спрятать скрытые элементы */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -63,6 +63,10 @@ body {
   gap: 28px;
 }
 
+.logo img {
+  display: block;
+}
+
 .page-navigation {
   font-size: 20px;
   font-weight: 700;
@@ -80,12 +84,14 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  min-width: 339px;
+  flex-wrap: wrap;
+  max-width: 539px;
 }
 
 .navigation-item {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .navigation-link {
@@ -107,7 +113,15 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  width: 268px;
+  flex-wrap: wrap;
+  max-width: 348px;
+}
+
+.user-navigation-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-item {
@@ -121,18 +135,16 @@ body {
 
 .nav-btn-icon {
   width: 44px;
+  padding: 22px 12px;
 }
 
 .special-nav-btn {
-  display: flex;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #756157;
   border-radius: 4px;
-  width: 160px;
-  height: 36px;
   margin-left: auto;
   align-self: center;
 }
