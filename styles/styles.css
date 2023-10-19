@@ -64,7 +64,9 @@ body {
 }
 
 .logo img {
-  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .page-navigation {
@@ -164,10 +166,16 @@ body {
   text-align: center;
   background-color: #3F5E72;
   background-image: url(../images/index-main-header-figure.svg), url(../images/index-main-header-background.jpg);
-  background-size: contain, cover;
+  background-size: auto, cover;
   background-repeat: no-repeat;
   background-position: bottom;
   padding: 51px 371px 82px;
+}
+
+.welcome-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .advantages {
@@ -281,7 +289,6 @@ body {
 }
 
 .btn-catalog {
-  display: flex;
   color: #FFFFFF;
   font-size: 20px;
   font-weight: 700;
@@ -290,11 +297,8 @@ body {
   text-decoration: none;
   background-color: #756157;
   border-radius: 4px;
-  width: 376px;
-  height: 52px;
+  padding: 8px 50px;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Подписка */
@@ -346,8 +350,7 @@ body {
   background-color: #82B3D3;
   border: none;
   border-radius: 0 4px 4px 0;
-  width: 232px;
-  height: 52px;
+  padding: 8px 50px;
 }
 
 /* subscribe extra-style for index-page*/
