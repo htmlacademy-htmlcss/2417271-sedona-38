@@ -225,10 +225,11 @@ body {
   padding: 0;
 }
 
+/* основной список преимущест */
 .lead-adv-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 385px);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .adv-item, .adv-with-pic-text-container {
@@ -265,13 +266,11 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   color: #000000;
-  margin: 0;
-  padding-bottom: 30px;
+  margin: 0 0 30px;
 }
 
 .adv-list p {
-  margin: 0;
-  padding-top: 30px;
+  margin: 30px 0 0;
 }
 
 .adv-dark-bg h3,
@@ -291,10 +290,20 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+/* список преимуществ сервиса */
+.adv-service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.adv-service-item {
+  padding: 80px 85px;
+}
+
 .adv-service-home {
   background-color: rgba(131, 179, 211, 0.12);
 }
-
 
 .adv-service-present {
   background-color: rgba(131, 179, 211, 0.12);
