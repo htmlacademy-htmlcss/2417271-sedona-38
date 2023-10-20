@@ -28,12 +28,12 @@
             </li>
           </ul>
           <ul class="user-navigation">
-            <li class="user-navigation-item">
+            <li class="user-navigation-item icon-item">
               <a class="btn-icon btn-search" href="#">
                 <span class="visually-hidden">Поиск по сайту</span>
               </a>
             </li>
-            <li class="user-navigation-item">
+            <li class="user-navigation-item icon-item">
               <a class="btn-icon btn-favorite" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="favorite-list-counter">12</span>
@@ -109,10 +109,12 @@
               </fieldset>
               <fieldset class="catalog-filter-group catalog-filter-group-price">
                 <legend class="catalog-filter-group-title">Стоимость, ₽:</legend>
-                <label for="min-price" class="control price-control">от</label>
-                <input type="number" name="min-price" id="min-price" class="control-input-price">
-                <label for="max-price" class="control price-control">до</label>
-                <input type="number" name="max-price" id="max-price" class="control-input-price">
+                <div class="price-control-wrapper">
+                  <label for="min-price" class="control price-control price-control-min">от</label>
+                  <input type="number" name="min-price" id="min-price" class="control-input-price input-price-min">
+                  <label for="max-price" class="control price-control price-control-max">до</label>
+                  <input type="number" name="max-price" id="max-price" class="control-input-price input-price-max">
+                </div>
                 <!-- здесь будет бегунок для диапазона цен -->
               </fieldset>
               <fieldset class="catalog-filter-group catalog-filter-group-btn">

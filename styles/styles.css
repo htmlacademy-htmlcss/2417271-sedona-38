@@ -192,31 +192,28 @@ body {
 }
 
 .lead-adv-text-container {
-  padding: 69px 0;
+  padding: 69px 200px;
 }
 
 .lead-adv-text-container p {
-  max-width: 800px;
   margin: 0 auto;
 }
 
 .lead-adv-text-container .slogan {
-  width: 620px;
-  margin: 0 auto 25px;
+  margin-bottom: 25px;
 }
 
 .adv-service-text-container {
-  padding: 64px 0;
+  padding: 64px 200px;
 }
 
 .adv-service-text-container p {
-  max-width: 800px;
   margin: 0 auto;
 }
 
 .adv-service-text-container .slogan {
   width: 505px;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
 }
 
 /* списки преимуществ */
@@ -270,7 +267,7 @@ body {
 /* Промо-секция для поиска гостиниц */
 .booking {
   text-align: center;
-  padding: 96px 0;
+  padding: 96px 200px;
   margin: 0 auto;
 }
 
@@ -284,7 +281,6 @@ body {
 }
 
 .booking p {
-  width: 592px;
   margin: 0 auto 54px;
 }
 
@@ -304,7 +300,7 @@ body {
 /* Подписка */
 .subscribe {
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 96px 200px 104px;
 }
 
 .subscribe h2 {
@@ -440,15 +436,35 @@ body {
   padding: 0;
   margin: 0 0 40px;
   display: flex;
+  flex-wrap: wrap;
 }
+
+.breadcrumbs-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .breadcrumbs-index {
+  display: block;
   background-image: url(../images/breadcrumbs-index.svg);
   background-size: contain;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   width: 13px;
-  height: 15px;
+  height: 100%;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+  content: "";
+  display: block;
+  background-image: url(../images/breadcrumbs-arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 8px;
+  height: 100%;
+  margin: 0 10px;
 }
 
 .breadcrumbs-link {
@@ -495,13 +511,54 @@ body {
   width: 288px;
 }
 
+.price-control-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 48px;
+  column-gap: 2px;
+  align-items: center;
+}
+
+.price-control-min {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 1;
+}
+
+.input-price-min {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.price-control-max {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  z-index: 1;
+}
+
+.input-price-max {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.control-input-price::-webkit-outer-spin-button,
+.control-input-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .control-input-price {
+  -moz-appearance: textfield;
+  box-sizing: border-box;
   width: 143px;
+  padding: 12px 20px;
+
 }
 
 .price-control {
   color: rgba(0, 0, 0, 0.3);
   text-align: right;
+  padding-right: 20px;
 }
 
 .catalog-filter-group-btn {
@@ -519,8 +576,7 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #82B3D3;
-  width: 191px;
-  padding: 8px 0;
+  padding: 8px 50px;
   border: none;
   border-radius: 4px;
 }
@@ -534,8 +590,7 @@ body {
   text-align: center;
   color: #FFFFFF;
   background-color: transparent;
-  width: 191px;
-  padding: 8px 0;
+  padding: 8px 50px;
   border: none;
   border-radius: 4px;
 }
@@ -567,7 +622,6 @@ body {
   color: #333333;
   margin-right: 70px;
   width: 292px;
-  height: 49px;
   padding: 14px 20px;
   background-color: transparent;
   border: 2px solid #E5E5E5;
@@ -710,18 +764,18 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
+  gap: 8px;
 }
 
 .pagination-item {
   text-align: center;
   background-color: #82B3D3;
-  width: 60px;
-  height: 60px;
   border-radius: 4px;
   margin-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 60px;
 }
 
 .pagination-item:last-child {
@@ -736,7 +790,8 @@ body {
 .pagination-link {
   color: inherit;
   text-decoration: none;
-
+  display: block;
+  padding: 12px 15px;
 }
 
 .pagination-separator {
