@@ -555,11 +555,11 @@ body {
   margin-right: auto;
 }
 
+/* форма ранжирования цен */
 .catalog-filter-group-price {
   width: 288px;
 }
 
-/* форма ранжирования цен */
 .price-control-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -577,6 +577,7 @@ body {
 .input-price-min {
   grid-column: 1/2;
   grid-row: 1/2;
+  border-radius: 4px 0 0 4px;
 }
 
 .price-control-max {
@@ -588,6 +589,7 @@ body {
 .input-price-max {
   grid-column: 2/3;
   grid-row: 1/2;
+  border-radius: 0 4px 4px 0;
 }
 
 .control-input-price::-webkit-outer-spin-button,
@@ -599,9 +601,10 @@ body {
 .control-input-price {
   -moz-appearance: textfield;
   box-sizing: border-box;
+  background-color: #F2F2F2;
   width: 143px;
   padding: 12px 20px;
-
+  border: none;
 }
 
 .price-control {
@@ -689,6 +692,7 @@ body {
 .btn-view {
   background-color: transparent;
   border: 2px solid #E5E5E5;
+  border-radius: 4px;
   width: 48px;
   height: 48px;
 }
