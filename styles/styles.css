@@ -291,12 +291,14 @@ body {
 .adv-service-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-auto-rows: 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
 }
 
 .adv-service-item {
+  box-sizing: border-box;
   padding: 80px 85px;
+  min-height: 385px;
 }
 
 .adv-service-home {
