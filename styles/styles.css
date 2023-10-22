@@ -229,24 +229,20 @@ body {
 .lead-adv-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-auto-rows: auto;
 }
 
 .adv-item, .adv-with-pic-text-container {
+  box-sizing: border-box;
   padding: 103px 84px;
+  min-height: 385px;
 }
 
-.adv-with-pic:first-of-type {
+.adv-with-pic {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  padding: 0;
-}
-
-.adv-with-pic:last-of-type {
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   padding: 0;
 }
 
@@ -254,9 +250,11 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  grid-column: span 2;
+  align-self: center;
 }
 
-.adv-with-pic:last-of-type .adv-pic {
+.adv-pic-reverse {
   order: -1;
 }
 
@@ -295,6 +293,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
 }
 
 .adv-service-item {
