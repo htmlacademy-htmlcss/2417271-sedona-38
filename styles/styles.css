@@ -204,7 +204,7 @@ body {
 }
 
 .adv-service-text-container {
-  padding: 64px 200px;
+  padding: 64px 340px;
 }
 
 .adv-service-text-container p {
@@ -212,7 +212,6 @@ body {
 }
 
 .adv-service-text-container .slogan {
-  width: 505px;
   margin-bottom: 20px;
 }
 
