@@ -57,9 +57,11 @@
             <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </div>
           <ul class="adv-list lead-adv-list">
-            <li class="adv-item adv-dark-bg">
-              <h3>Настоящий городок</h3>
-              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <li class="adv-item adv-dark-bg adv-with-pic">
+              <div class="adv-with-pic-text-container">
+                <h3>Настоящий городок</h3>
+                <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
               <img class="adv-pic" src="images/adv-pic-sedona-streets.jpg" width="800" height="385" alt="Улицы Седоны">
             </li>
             <li class="adv-item adv-light-bg">
@@ -74,10 +76,12 @@
               <h3>Мало туристов</h3>
               <p>Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="adv-item adv-dark-bg">
-              <h3>Там есть мост дьявола</h3>
-              <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-              <img class="adv-pic" src="images/adv-pic-devil-bridge.jpg" width="800" height="385" alt="Мост Дьявола">
+            <li class="adv-item adv-dark-bg adv-with-pic">
+              <div class="adv-with-pic-text-container">
+                <h3>Там есть мост дьявола</h3>
+                <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
+              <img class="adv-pic adv-pic-reverse" src="images/adv-pic-devil-bridge.jpg" width="800" height="385" alt="Мост Дьявола">
             </li>
           </ul>
         </section>
@@ -90,15 +94,15 @@
           <ul class="adv-list adv-service-list">
             <li class="adv-service-item adv-service-home">
               <h3>Жильё</h3>
-              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <p>Рекомендуем пожить</br> в настоящем мотеле, всё как в кино!</p>
             </li>
             <li class="adv-service-item adv-service-food">
               <h3>Еда</h3>
-              <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <p>Всегда заказывайте</br> топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="adv-service-item adv-service-present">
               <h3>Сувениры</h3>
-              <p>Не только китайского, но и настоящего местного производства!</p>
+              <p>Не только китайского,</br> но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
@@ -112,8 +116,8 @@
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-field">Ваш e-mail</label>
-            <input class="subscribe-form-input" type="email" name="subscribe-mail" id="subscribe-field" placeholder="Ваш e-mail">
-            <input class="button subscribe-submit-btn" type="submit" value="Подписаться">
+            <input class="subscribe-form-input" type="email" name="subscribe-mail" id="subscribe-field" required placeholder="Ваш e-mail">
+            <button class="button subscribe-submit-btn" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
