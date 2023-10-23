@@ -381,8 +381,7 @@ body {
 }
 
 .subscribe-form-input::placeholder {
-  font-size: 18px;
-  line-height: 24px;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -740,6 +739,7 @@ body {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 212px 1fr;
   gap: 16px 20px;
 }
 
