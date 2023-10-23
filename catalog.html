@@ -66,19 +66,19 @@
                 <ul class="catalog-filter-group-setting">
                   <li class="catalog-filter-group-item">
                     <label class="control">
-                      <input type="checkbox" name="pool" class="control-input input-infrastructure" checked>
+                      <input type="checkbox" name="pool" class="control-input input-checkbox" checked>
                       Бассейн
                     </label>
                   </li>
                   <li class="catalog-filter-group-item">
                     <label class="control">
-                      <input type="checkbox" name="parking" class="control-input input-infrastructure" checked>
+                      <input type="checkbox" name="parking" class="control-input input-checkbox" checked>
                       Парковка
                     </label>
                   </li>
                   <li class="catalog-filter-group-item">
                     <label class="control">
-                      <input type="checkbox" name="wi-fi" class="control-input input-infrastructure">
+                      <input type="checkbox" name="wi-fi" class="control-input input-checkbox">
                       Wi-Fi
                     </label>
                   </li>
@@ -89,19 +89,19 @@
                 <ul class="catalog-filter-group-setting">
                   <li class="catalog-filter-group-item">
                     <label class="control">
-                      <input type="radio" name="group-setting" value="hotel" class="control-input" checked>
+                      <input type="radio" name="group-setting" value="hotel" class="control-input input-radio" checked>
                       Гостиница
                     </label>
                   </li>
                   <li class="catalog-filter-group-item">
                     <label class="control">
-                      <input type="radio" name="group-setting" value="motel" class="control-input">
+                      <input type="radio" name="group-setting" value="motel" class="control-input input-radio">
                       Мотель
                     </label>
                   </li>
                   <li class="catalog-filter-group-item">
                     <label class="control">
-                      <input type="radio" name="group-setting" value="apartments" class="control-input">
+                      <input type="radio" name="group-setting" value="apartments" class="control-input input-radio">
                       Апартаменты
                     </label>
                   </li>
@@ -110,16 +110,16 @@
               <fieldset class="catalog-filter-group catalog-filter-group-price">
                 <legend class="catalog-filter-group-title">Стоимость, ₽:</legend>
                 <div class="price-control-wrapper">
-                  <label for="min-price" class="control price-control price-control-min">от</label>
-                  <input type="number" name="min-price" id="min-price" class="control-input-price input-price-min">
+                  <label for="min-price" class="control price-control price-control-min" >от</label>
+                  <input type="number" name="min-price" id="min-price" class="control-input-price input-price-min" min="0" max="10000">
                   <label for="max-price" class="control price-control price-control-max">до</label>
-                  <input type="number" name="max-price" id="max-price" class="control-input-price input-price-max">
+                  <input type="number" name="max-price" id="max-price" class="control-input-price input-price-max" min="0" max="10000">
                 </div>
                 <!-- здесь будет бегунок для диапазона цен -->
               </fieldset>
               <fieldset class="catalog-filter-group catalog-filter-group-btn">
-                <input class="button catalog-filter-submit-btn" type="submit" value="Применить">
-                <input class="button catalog-filter-reset-btn" type="reset" value="Сбросить">
+                <button class="button catalog-filter-submit-btn" type="submit">Применить</button>
+                <button class="button catalog-filter-reset-btn" type="reset">Сбросить</button>
               </fieldset>
             </form>
           </section>
