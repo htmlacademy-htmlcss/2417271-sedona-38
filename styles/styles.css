@@ -368,6 +368,11 @@ body {
 }
 
 .subscribe-form-input {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
   background-color: #F2F2F2;
   width: 452px;
   padding: 12px 20px;
