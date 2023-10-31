@@ -977,21 +977,26 @@ body {
 }
 
 .catalog-list-item-stars {
+  height: 17px;
+  align-self: center;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: space;
   background-position: center;
 }
 
 .stars-2 {
-  background-image: url(../images/catalog-hotel-2stars.svg);
+  background-image: url(../images/star.svg);
+  width: 42px;
 }
 
 .stars-3 {
-  background-image: url(../images/catalog-hotel-3stars.svg);
+  background-image: url(../images/star.svg);
+  width: 66px;
 }
 
 .stars-4 {
-  background-image: url(../images/catalog-hotel-4stars.svg);
+  background-image: url(../images/star.svg);
+  width: 89px;
 }
 
 .catalog-list-item-raiting {
