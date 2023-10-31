@@ -51,7 +51,7 @@ body {
 
 /* состояния кнопок */
 .sub-btn,
-.transparent-btn,
+.designer-btn,
 .control-input,
 .select-control {
   cursor: pointer;
@@ -65,11 +65,6 @@ body {
 .main-btn:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
-}
-
-.main-btn:disabled {
-  background-color: #E5E5E5;
-  color: #FFFFFF;
 }
 
 .sub-btn:hover,
@@ -101,20 +96,20 @@ body {
   color: #FFFFFF;
 }
 
-.transparent-btn:hover {
+.designer-btn:hover {
   opacity: 0.6;
 }
 
-.transparent-btn:focus {
+.designer-btn:focus {
   border: 3px solid #83B3D3;
   color: #FFFFFF;
 }
 
-.transparent-btn:active {
+.designer-btn:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.transparent-btn:disabled {
+.designer-btn:disabled {
   opacity: 0.1;
 }
 
@@ -515,6 +510,7 @@ body {
 }
 
 .btn-social {
+  color: #83B3D3;
   width: 27px;
   padding: 10px;
 }
@@ -535,6 +531,36 @@ body {
   display: flex;
   width: 120px;
   align-items: center;
+}
+
+.about-developer-contacts {
+  color: #000000;
+}
+
+/* состояния кнопок футера */
+
+.btn-social:hover,
+.btn-social:focus {
+  color: #68A2CA;
+}
+.btn-social:active {
+  color: rgba(104, 162, 202, 0.3);
+}
+
+.footer-contacts-phone:hover,
+.footer-contacts-phone:focus {
+  color: #756157;
+}
+.footer-contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.about-developer-contacts:hover,
+.about-developer-contacts:focus {
+  color: #756157;
+}
+.about-developer-contacts:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /* ---catalog--- */
