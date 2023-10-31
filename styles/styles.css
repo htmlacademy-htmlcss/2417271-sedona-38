@@ -186,7 +186,7 @@ body {
 }
 
 .navigation-link:active {
-  color: rgba(117, 97, 87, 0.3);l
+  color: rgba(117, 97, 87, 0.3);
   text-decoration-line: underline;
   text-decoration-color: #615048;
   text-decoration-style: solid;
@@ -625,13 +625,7 @@ body {
 
 .breadcrumbs-index {
   display: block;
-  /* background-image: url(../images/breadcrumbs-index.svg);
-  background-size: contain;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center; */
   width: 13px;
-  /* height: 100%; */
 }
 
 .breadcrumbs-item:not(:first-child)::before {
