@@ -392,16 +392,32 @@ body {
 
 .adv-service-item {
   box-sizing: border-box;
-  padding: 80px 85px;
+  padding: 78px 85px;
   min-height: 385px;
 }
 
-.adv-service-home {
+.adv-service-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.adv-service-present {
-  background-color: rgba(131, 179, 211, 0.12);
+.adv-service-item h3::before {
+  content: "";
+  display: block;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 28px;
+  background-image: url(../images/adv-service-icon.svg);
+  /* background-size: ; */
+}
+
+.adv-service-home h3::before {
+  background-position: -133px -18px;
+}
+.adv-service-food h3::before {
+  background-position: -258px -19px;
+}
+.adv-service-present h3::before {
+  background-position: -14px -20px;
 }
 
 /* Промо-секция для поиска гостиниц */
