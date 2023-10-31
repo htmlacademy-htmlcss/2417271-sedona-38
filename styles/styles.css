@@ -53,6 +53,7 @@ body {
 .sub-btn,
 .designer-btn,
 .control-input,
+.btn-view,
 .select-control {
   cursor: pointer;
 }
@@ -221,9 +222,33 @@ body {
 }
 
 .nav-btn-icon {
+  box-sizing: border-box;
   line-height: 20px;
-  width: 44px;
+  min-width: 44px;
+  min-height: 64px;
   padding: 22px 12px;
+  border: 2px solid transparent;
+}
+
+.btn-search {
+  background-image: url(../images/icon-search.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.btn-favorite {
+  background-image: url(../images/icon-favorit.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.nav-btn-icon:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn-icon:focus,
+.nav-btn-icon:active {
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .favorite-list-counter {
@@ -234,12 +259,21 @@ body {
   text-align: center;
   color: #FFFFFF;
   background-color: #7DB54F;
+  min-width: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  top: 11px;
+  right: 4px;
 }
 
 .special-nav-btn {
-  margin-left: auto;
   align-self: center;
   color: #FFFFFF;
+}
+
+li+.special-nav-btn {
+  margin-left: 20px;
 }
 
 .btn-modal {
@@ -860,6 +894,16 @@ body {
   border-radius: 4px;
 }
 
+.select-control:hover,
+.select-control:focus {
+  border-color: #68A2CA;
+}
+
+.select-control:active {
+  color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
 .view-list {
   list-style: none;
   padding: 0;
@@ -870,15 +914,41 @@ body {
 
 .btn-view {
   background-color: transparent;
+  background-image: url(../images/view-icon.svg);
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   width: 48px;
   height: 48px;
 }
 
-.btn-view-active {
-  border: 2px solid #000000;
+.table-view {
+  background-position: -4px -4px;
 }
+
+.slide-view {
+  background-position: -62px -4px;
+}
+
+.list-view {
+  background-position: -120px -4px;
+}
+
+.btn-view-active {
+  border-color: #000000;
+}
+
+.btn-view:hover {
+  border-color: #000000;
+}
+
+.btn-view:focus {
+  border-color: #68A2CA;
+}
+
+.btn-view:active {
+  border-color: #000000;
+}
+
 
 /* карточки отелей */
 .catalog-list {
