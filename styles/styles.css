@@ -363,12 +363,13 @@ li+.special-nav-btn {
   grid-auto-rows: auto;
 }
 
-.adv-item, .adv-with-pic-text-container {
+.adv-item:not(.adv-with-pic), .adv-with-pic-text-container {
   box-sizing: border-box;
   padding: 100px 84px;
   min-height: 385px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .adv-item h3::after {
