@@ -1007,6 +1007,18 @@ li+.special-nav-btn {
   text-align: center;
 }
 
+.hotel-info:hover {
+  color: #756157;
+}
+
+.hotel-info:focus {
+  color: #756157;
+}
+
+.hotel-info:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .catalog-list-item-about {
   width: 140px;
   margin: 0;
