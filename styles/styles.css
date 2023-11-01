@@ -102,7 +102,7 @@ body {
 }
 
 .designer-btn:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   color: #FFFFFF;
 }
 
@@ -762,12 +762,71 @@ li+.special-nav-btn {
   margin-right: auto;
 }
 
-/* чекбоксы */
+/* чекбоксы и радио*/
 .control-label {
   padding-left: 36px;
 }
-.control-mark {
 
+.control {
+  position: relative;
+  display: block;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.control-mark-radio {
+  position: absolute;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: 3px solid transparent;
+  background-color: #FFFFFF;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+/* не понимаю почему: если через девтулс выбрать лэйбл и поставить ему состояние фокуса - работает. Просто листая через таб или мышкой - нет */
+.control:focus .control-mark,
+.control:focus .control-mark-radio {
+  outline: 3px solid #83B3D3;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+/* тоже почему то не работает */
+.control:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url(../images/checkbox-tick.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.control-input[type="radio"]:checked + .control-mark-radio::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
 }
 
 /* форма ранжирования цен */
@@ -810,7 +869,7 @@ li+.special-nav-btn {
 
 .control-input-price::-webkit-outer-spin-button,
 .control-input-price::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -822,24 +881,22 @@ li+.special-nav-btn {
   line-height: 24px;
   color: #000000;
   box-sizing: border-box;
-  border: 3px solid #F2F2F2;
   background-color: #F2F2F2;
   width: 143px;
-  padding: 9px 37px 9px 17px;
+  padding: 12px 40px 12px 20px;
+  border: none;
 }
 
 .control-input-price:hover {
   background-color: #E6E6E6;
-  border-color: #E6E6E6;
 }
 .control-input-price:focus {
   background-color: #E6E6E6;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 .control-input-price:active {
   background-color: #E6E6E6;
-  padding: 10px 38px 10px 18px;
-  border: 2px solid #83B3D3;
+  outline: 2px solid #83B3D3;
 }
 
 .price-control {
@@ -868,19 +925,22 @@ li+.special-nav-btn {
   width: 20px;
   height: 20px;
   padding: 0;
-  border: 3px solid transparent;
   background-color: #FFFFFF;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
 
-.price-toggle:hover,
+.price-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25)
+}
+
 .price-toggle:focus {
-  border-color: #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .price-toggle:active {
-  border: 2px solid #83B3D3;
+  outline: 2px solid #83B3D3;
 }
 
 .price-toggle-min {
@@ -927,10 +987,6 @@ li+.special-nav-btn {
   padding: 8px 50px;
   border: none;
   border-radius: 4px;
-}
-
-.catalog-filter-submit-btn:value {
-  word-break: break-all;
 }
 
 /* ---catalog main--- */
