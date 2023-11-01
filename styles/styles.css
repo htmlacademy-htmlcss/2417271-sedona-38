@@ -1291,3 +1291,249 @@ li+.special-nav-btn {
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
 }
+
+/* модальное окно */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  width: 577px;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #FFFFFF;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+/* кнопка "закрыть" */
+.modal-close-btn {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  padding: 0;
+  border: none;
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #F2F2F2;
+  color: #000000;
+  cursor: pointer;
+}
+
+.modal-close-btn-icon {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+}
+
+.modal-close-btn:hover {
+  background-color: #E6E6E6;
+}
+.modal-close-btn:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-btn:active,
+.modal-close-btn:disabled {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* основная часть */
+.modal-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 64px;
+  color: #000000;
+}
+
+.modal-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.modal-booking-in,
+.modal-booking-out {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-booking-form-label {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+  align-items: center;
+}
+
+.modal-booking-form-input {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  box-sizing: border-box;
+  width: 440px;
+  padding: 12px 40px 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F2F2F2;
+}
+
+.modal-booking-form-input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-booking-form-input:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-booking-form-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+.modal-booking-form-input:active {
+  background-color: #E6E6E6;
+  outline: 2px solid #83B3D3;
+}
+.modal-booking-form-input:disabled {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-booking-form-date {
+  background-image: url(../images/modal-date.svg);
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+}
+
+.form-notification {
+  position: absolute;
+  top: 52px;
+  left: 157px;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0 0 23px;
+}
+
+.form-notificaton-alert {
+  color: #FF5757;
+}
+
+.modal-booking-lot {
+  display: flex;
+  align-items: center;
+}
+
+.modal-booking-form-label-lot {
+  margin-right: 46px;
+}
+
+.modal-booking-form-lot-wrapper + .modal-booking-form-label-lot {
+  margin-left: auto;
+}
+
+.modal-booking-form-lot::-webkit-outer-spin-button,
+.modal-booking-form-lot::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.modal-booking-form-lot-wrapper {
+  position: relative;
+}
+
+.modal-booking-form-lot {
+  -moz-appearance: textfield;
+  width: 110px;
+  padding: 14px 45px;
+  text-align: center;
+}
+
+.modal-booking-form-minus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  color: rgba(117, 97, 87, 0.3);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.modal-booking-form-plus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  color: rgba(117, 97, 87, 0.3);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-booking-form-icon-plus {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  margin-top: -7px;
+}
+
+.modal-booking-form-icon-minus{
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  margin-top: -1px;
+}
+
+.modal-booking-form-minus:hover,
+.modal-booking-form-plus:hover {
+  color: #000000;
+}
+
+.modal-booking-form-minus:focus,
+.modal-booking-form-plus:focus {
+  outline: 3px solid #82B3D3;
+}
+
+.modal-booking-form-minus:active,
+.modal-booking-form-plus:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-booking-form-minus:disabled,
+.modal-booking-form-plus:disabled {
+  color: rgba(0, 0, 0, 0.2);
+  background-color: #E6E6E6;
+}
+
+.modal-booking-btn {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  padding: 18px 77px;
+  border-radius: 10px;
+  border: none;
+}
