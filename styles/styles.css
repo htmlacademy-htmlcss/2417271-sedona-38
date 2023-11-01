@@ -13,6 +13,7 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+
 html {
   height: 100%;
 }
@@ -235,6 +236,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .btn-favorite {
   background-image: url(../images/icon-favorit.svg);
   background-position: center;
@@ -272,7 +274,7 @@ body {
   color: #FFFFFF;
 }
 
-li+.special-nav-btn {
+li + .special-nav-btn {
   margin-left: 20px;
 }
 
@@ -363,7 +365,8 @@ li+.special-nav-btn {
   grid-auto-rows: auto;
 }
 
-.adv-item:not(.adv-with-pic), .adv-with-pic-text-container {
+.adv-item:not(.adv-with-pic),
+.adv-with-pic-text-container {
   box-sizing: border-box;
   padding: 100px 84px;
   min-height: 385px;
@@ -466,9 +469,11 @@ li+.special-nav-btn {
 .adv-service-home h3::before {
   background-position: -133px -18px;
 }
+
 .adv-service-food h3::before {
   background-position: -258px -19px;
 }
+
 .adv-service-present h3::before {
   background-position: -14px -20px;
 }
@@ -594,6 +599,7 @@ li+.special-nav-btn {
   display: flex;
   min-width: 145px;
 }
+
 .social-list-item {
   display: flex;
 }
@@ -632,6 +638,7 @@ li+.special-nav-btn {
 .btn-social:focus {
   color: #68A2CA;
 }
+
 .btn-social:active {
   color: rgba(104, 162, 202, 0.3);
 }
@@ -640,6 +647,7 @@ li+.special-nav-btn {
 .footer-contacts-phone:focus {
   color: #756157;
 }
+
 .footer-contacts-phone:active {
   color: rgba(117, 97, 87, 0.3);
 }
@@ -648,6 +656,7 @@ li+.special-nav-btn {
 .about-developer-contacts:focus {
   color: #756157;
 }
+
 .about-developer-contacts:active {
   color: rgba(117, 97, 87, 0.3);
 }
@@ -719,9 +728,11 @@ li+.special-nav-btn {
 .breadcrumbs-link:hover {
   color: rgba(255, 255, 255, 0.6);
 }
+
 .breadcrumbs-link:focus {
   color: #FFFFFF;
 }
+
 .breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -890,10 +901,12 @@ li+.special-nav-btn {
 .control-input-price:hover {
   background-color: #E6E6E6;
 }
+
 .control-input-price:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
+
 .control-input-price:active {
   background-color: #E6E6E6;
   outline: 2px solid #83B3D3;
@@ -947,6 +960,7 @@ li+.special-nav-btn {
   top: -8px;
   left: 0;
 }
+
 .price-toggle-max {
   top: -8px;
   right: 0;
@@ -1300,6 +1314,11 @@ li+.special-nav-btn {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  display: none;
+}
+
+.modal-active {
+  display: block;
 }
 
 .modal {
@@ -1337,6 +1356,7 @@ li+.special-nav-btn {
 .modal-close-btn:hover {
   background-color: #E6E6E6;
 }
+
 .modal-close-btn:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
@@ -1406,10 +1426,12 @@ li+.special-nav-btn {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
+
 .modal-booking-form-input:active {
   background-color: #E6E6E6;
   outline: 2px solid #83B3D3;
 }
+
 .modal-booking-form-input:disabled {
   background-color: #E6E6E6;
   color: rgba(0, 0, 0, 0.6);
@@ -1476,6 +1498,7 @@ li+.special-nav-btn {
   padding: 0;
   cursor: pointer;
 }
+
 .modal-booking-form-plus {
   position: absolute;
   top: 0;
@@ -1496,7 +1519,7 @@ li+.special-nav-btn {
   margin-top: -7px;
 }
 
-.modal-booking-form-icon-minus{
+.modal-booking-form-icon-minus {
   position: absolute;
   top: 50%;
   left: 13px;
@@ -1536,4 +1559,64 @@ li+.special-nav-btn {
   padding: 18px 77px;
   border-radius: 10px;
   border: none;
+}
+
+/* тултип */
+.modal-booking-form-children {
+  position: relative;
+  margin-right: 82px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 59px;
+  z-index: 1;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: #83B3D3;
+  color: #FFFFFF;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 41px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: #333333;
+  width: 220px;
+  padding: 15px 18px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+  display: none;
+}
+
+.tooltip-text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -9px;
+  left: 118px;
+  width: 19px;
+  height: 9px;
+  background-image: url(../images/tooltip-triangle.svg);
+  background-repeat: no-repeat;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
