@@ -1011,13 +1011,19 @@ li+.special-nav-btn {
 }
 
 .select-control {
+  appearance: none;
+  box-sizing: border-box;
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   margin-right: 70px;
   width: 292px;
-  padding: 14px 20px;
+  padding: 12px 35px 12px 20px;
   background-color: transparent;
+  background-image: url(../images/select-arrow.svg);
+  background-position: right 20px center;
+  background-repeat: no-repeat;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
@@ -1027,9 +1033,10 @@ li+.special-nav-btn {
   border-color: #68A2CA;
 }
 
-.select-control:active {
-  color: rgba(0, 0, 0, 0.3);
-  border-color: rgba(0, 0, 0, 0.3);
+.select-control:active,
+.select-control:disabled {
+  border-color: #000000;
+  opacity: 0.3;
 }
 
 .view-list {
