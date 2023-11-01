@@ -52,7 +52,7 @@ body {
 /* состояния кнопок */
 .sub-btn,
 .designer-btn,
-.control-input,
+.control,
 .btn-view,
 .select-control {
   cursor: pointer;
@@ -762,6 +762,14 @@ li+.special-nav-btn {
   margin-right: auto;
 }
 
+/* чекбоксы */
+.control-label {
+  padding-left: 36px;
+}
+.control-mark {
+
+}
+
 /* форма ранжирования цен */
 .catalog-filter-group-price {
   width: 288px;
@@ -773,6 +781,7 @@ li+.special-nav-btn {
   grid-template-rows: 48px;
   column-gap: 2px;
   align-items: center;
+  margin-bottom: 44px;
 }
 
 .price-control-min {
@@ -809,13 +818,28 @@ li+.special-nav-btn {
   -moz-appearance: textfield;
   font-family: inherit;
   font-weight: 700;
+  font-size: 18px;
   line-height: 24px;
   color: #000000;
   box-sizing: border-box;
+  border: 3px solid #F2F2F2;
   background-color: #F2F2F2;
   width: 143px;
-  padding: 12px 40px 12px 20px;
-  border: none;
+  padding: 9px 37px 9px 17px;
+}
+
+.control-input-price:hover {
+  background-color: #E6E6E6;
+  border-color: #E6E6E6;
+}
+.control-input-price:focus {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+.control-input-price:active {
+  background-color: #E6E6E6;
+  padding: 10px 38px 10px 18px;
+  border: 2px solid #83B3D3;
 }
 
 .price-control {
@@ -824,6 +848,48 @@ li+.special-nav-btn {
   padding-right: 20px;
   justify-self: end;
   cursor: text;
+}
+
+.price-control-scale {
+  position: relative;
+  height: 4px;
+  width: 287px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-control-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.price-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 3px solid transparent;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.price-toggle:hover,
+.price-toggle:focus {
+  border-color: #83B3D3;
+}
+
+.price-toggle:active {
+  border: 2px solid #83B3D3;
+}
+
+.price-toggle-min {
+  top: -8px;
+  left: 0;
+}
+.price-toggle-max {
+  top: -8px;
+  right: 0;
 }
 
 /* кнопки фильтров */
