@@ -795,9 +795,8 @@ li+.special-nav-btn {
   opacity: 0.6;
 }
 
-/* не понимаю почему: если через девтулс выбрать лэйбл и поставить ему состояние фокуса - работает. Просто листая через таб или мышкой - нет */
-.control:focus .control-mark,
-.control:focus .control-mark-radio {
+.control-input:focus ~ .control-mark,
+.control-input:focus ~ .control-mark-radio {
   outline: 3px solid #83B3D3;
 }
 
@@ -805,8 +804,9 @@ li+.special-nav-btn {
   opacity: 0.3;
 }
 
-/* тоже почему то не работает */
-.control:disabled {
+.control-input:disabled ~ .control-mark,
+.control-input:disabled ~ .control-mark-radio,
+.control-input:disabled ~ .control-label {
   opacity: 0.2;
   cursor: not-allowed;
 }
