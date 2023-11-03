@@ -125,6 +125,8 @@ body {
 
 .logo {
   position: absolute;
+  top: 0;
+  left: 70px;
   display: block;
 }
 
@@ -167,34 +169,33 @@ body {
   color: inherit;
   text-decoration: none;
   padding: 20px 16px;
+  position: relative;
 }
 
-.active-nav-item {
-  text-decoration-line: underline;
-  text-decoration-color: #756257;
-  text-decoration-style: solid;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 23px;
+.current-nav-link::after,
+.navigation-link:hover::after,
+.navigation-link:focus::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  background-color: #615048;
+  height: 2px;
+  transform: translateY(50%);
 }
 
 .navigation-link:hover,
 .navigation-link:focus {
   color: #756157;
-  text-decoration-line: underline;
-  text-decoration-color: #615048;
-  text-decoration-style: solid;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 23px;
 }
 
 .navigation-link:active {
   color: rgba(117, 97, 87, 0.3);
-  text-decoration-line: underline;
-  text-decoration-color: #615048;
-  text-decoration-style: solid;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 23px;
 }
+
+
 
 /* Дополнительная навигация */
 .user-navigation {
@@ -704,6 +705,9 @@ li + .special-nav-btn {
 .breadcrumbs-index {
   display: block;
   width: 13px;
+  background-image: url(../images/index-bc-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .breadcrumbs-item:not(:first-child)::before {
@@ -726,15 +730,15 @@ li + .special-nav-btn {
 /* состояния для хлебных крошек */
 
 .breadcrumbs-link:hover {
-  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.6;
 }
 
 .breadcrumbs-link:focus {
-  color: #FFFFFF;
+  opacity: 1;
 }
 
 .breadcrumbs-link:active {
-  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.3;
 }
 
 /* фильтры */
@@ -786,6 +790,7 @@ li + .special-nav-btn {
 .control-mark {
   position: absolute;
   top: 2px;
+  left: 0;
   width: 20px;
   height: 20px;
   border-radius: 4px;
@@ -795,6 +800,7 @@ li + .special-nav-btn {
 .control-mark-radio {
   position: absolute;
   top: 2px;
+  left: 0;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -929,12 +935,15 @@ li + .special-nav-btn {
 
 .price-control-bar {
   position: absolute;
+  top: 0;
   height: 4px;
   background-color: #FFFFFF;
 }
 
 .price-toggle {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   padding: 0;
@@ -957,13 +966,12 @@ li + .special-nav-btn {
 }
 
 .price-toggle-min {
-  top: -8px;
   left: 0;
 }
 
 .price-toggle-max {
-  top: -8px;
   right: 0;
+  transform: translate(100%, -50%);
 }
 
 /* кнопки фильтров */
@@ -1318,7 +1326,7 @@ li + .special-nav-btn {
 }
 
 .modal-active {
-  display: block;
+  display: flex;
 }
 
 .modal {
@@ -1374,23 +1382,65 @@ li + .special-nav-btn {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  max-width: 543px;
   margin: 0;
   margin-bottom: 64px;
   color: #000000;
 }
 
 .modal-booking-form {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+  display: grid;
+  grid-template-columns: 137px 110px 1fr 110px;
+  grid-template-rows: repeat(7, minmax(48px, auto));
+  grid-template-areas: "label-in form-in form-in form-in"
+    ". note-in note-in note-in"
+    "label-out form-out form-out form-out"
+    ". note-out note-out note-out"
+    "label-adult form-adult label-child form-child"
+    ". . . ."
+    "modal-btn modal-btn modal-btn modal-btn";
+  align-items: center;
 }
 
-.modal-booking-in,
-.modal-booking-out {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.modal-booking-form-label-arrival {
+  grid-area: label-in;
+}
+
+.modal-booking-form-date-arrival {
+  grid-area: form-in;
+}
+
+.form-notification-arrival {
+  grid-area: note-in;
+}
+
+.modal-booking-form-label-departure {
+  grid-area: label-out;
+}
+
+.modal-booking-form-date-departure {
+  grid-area: form-out;
+}
+
+.form-notification-departure {
+  grid-area: note-out;
+}
+
+.modal-booking-form-label-adult {
+  grid-area: label-adult;
+}
+
+.modal-booking-form-adult {
+  grid-area: form-adult;
+}
+
+.modal-booking-form-label-children {
+  grid-area: label-child;
+  justify-self: end;
+}
+
+.modal-booking-form-children {
+  grid-area: form-child;
 }
 
 .modal-booking-form-label {
@@ -1398,7 +1448,6 @@ li + .special-nav-btn {
   font-weight: 700;
   line-height: 24px;
   color: #000000;
-  align-items: center;
 }
 
 .modal-booking-form-input {
@@ -1444,29 +1493,15 @@ li + .special-nav-btn {
 }
 
 .form-notification {
-  position: absolute;
-  top: 52px;
-  left: 157px;
   font-size: 16px;
   line-height: 21px;
-  margin: 0 0 23px;
+  padding-left: 20px;
+  margin: 0;
+  align-self: start;
 }
 
 .form-notificaton-alert {
   color: #FF5757;
-}
-
-.modal-booking-lot {
-  display: flex;
-  align-items: center;
-}
-
-.modal-booking-form-label-lot {
-  margin-right: 46px;
-}
-
-.modal-booking-form-lot-wrapper + .modal-booking-form-label-lot {
-  margin-left: auto;
 }
 
 .modal-booking-form-lot::-webkit-outer-spin-button,
@@ -1482,14 +1517,13 @@ li + .special-nav-btn {
 .modal-booking-form-lot {
   -moz-appearance: textfield;
   width: 110px;
-  padding: 14px 45px;
+  padding: 14px 40px;
   text-align: center;
 }
 
-.modal-booking-form-minus {
+.modal-booking-form-counter {
   position: absolute;
   top: 0;
-  left: 0;
   width: 40px;
   height: 100%;
   color: rgba(117, 97, 87, 0.3);
@@ -1497,52 +1531,36 @@ li + .special-nav-btn {
   border: none;
   padding: 0;
   cursor: pointer;
+}
+
+.modal-booking-form-minus {
+  left: 0;
 }
 
 .modal-booking-form-plus {
-  position: absolute;
-  top: 0;
   right: 0;
-  width: 40px;
-  height: 100%;
-  color: rgba(117, 97, 87, 0.3);
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
 }
 
-.modal-booking-form-icon-plus {
+.modal-booking-form-icon {
   position: absolute;
   top: 50%;
-  right: 13px;
-  margin-top: -7px;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
-.modal-booking-form-icon-minus {
-  position: absolute;
-  top: 50%;
-  left: 13px;
-  margin-top: -1px;
-}
-
-.modal-booking-form-minus:hover,
-.modal-booking-form-plus:hover {
+.modal-booking-form-counter:hover {
   color: #000000;
 }
 
-.modal-booking-form-minus:focus,
-.modal-booking-form-plus:focus {
+.modal-booking-form-counter:focus {
   outline: 3px solid #82B3D3;
 }
 
-.modal-booking-form-minus:active,
-.modal-booking-form-plus:active {
+.modal-booking-form-counter:active {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.modal-booking-form-minus:disabled,
-.modal-booking-form-plus:disabled {
+.modal-booking-form-counter:disabled {
   color: rgba(0, 0, 0, 0.2);
   background-color: #E6E6E6;
 }
@@ -1559,25 +1577,30 @@ li + .special-nav-btn {
   padding: 18px 77px;
   border-radius: 10px;
   border: none;
+  grid-area: modal-btn;
 }
 
 /* тултип */
-.modal-booking-form-children {
+.modal-booking-form-label-children {
   position: relative;
+  margin-left: 10px;
   margin-right: 82px;
 }
 
 .tooltip {
   position: absolute;
-  top: 0;
-  left: 59px;
+  top: 50%;
+  right: -36px;
   z-index: 1;
+  transform: translateY(-50%);
 }
 
 .tooltip-toggle {
   border: none;
   background-color: #83B3D3;
-  color: #FFFFFF;
+  background-image: url(../images/tooltip-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   width: 26px;
   height: 26px;
   border-radius: 50%;

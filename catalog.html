@@ -24,7 +24,7 @@
               <a href="#" class="navigation-link">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a href="catalog.html" aria-current="page" class="navigation-link active-nav-item">Гостиницы</a>
+              <a href="catalog.html" aria-current="page" class="navigation-link current-nav-link">Гостиницы</a>
             </li>
           </ul>
           <ul class="user-navigation">
@@ -52,11 +52,6 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link breadcrumbs-index" href="index.html">
                 <span class="visually-hidden">Главная</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor">
-                  <path
-                    d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" />
-                  <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" />
-                </svg>
               </a>
             </li>
             <li class="breadcrumbs-item">
@@ -124,13 +119,13 @@
                 <div class="price-control-wrapper">
                   <label for="min-price" class="control price-control price-control-min">от</label>
                   <input type="number" name="min-price" id="min-price" class="control-input-price input-price-min"
-                    min="0" max="12000" value="0">
+                    min="0" max="90000" value="0">
                   <label for="max-price" class="control price-control price-control-max">до</label>
                   <input type="number" name="max-price" id="max-price" class="control-input-price input-price-max"
-                    min="0" max="12000" value="9000">
+                    min="0" max="90000" value="9000">
                 </div>
                 <div class="price-control-scale">
-                  <div class="price-control-bar" style="left: 0; width: 226px;">
+                  <div class="price-control-bar" style="left: 0; width: 186px;">
                     <button class="price-toggle price-toggle-min" type="button">
                       <span class="visually-hidden">Минимальная цена</span>
                     </button>
@@ -378,65 +373,58 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-booking-form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="modal-booking-in">
-              <label class="modal-booking-form-label">Дата Заезда:</label>
-              <input class="modal-booking-form-input modal-booking-form-date" type="date" placeholder="Укажите дату"
-                value="2020-04-27">
-              <span class="form-notification form-notificaton-alert modal-current-notification">Мы не можем отправить
-                вас в прошлое.</span>
+            <label class="modal-booking-form-label modal-booking-form-label-arrival" for="arrival">Дата Заезда:</label>
+            <input class="modal-booking-form-input modal-booking-form-date modal-booking-form-date-arrival" type="text"
+              name="arrival-date" id="arrival" placeholder="Укажите дату" value="27 апреля 2020">
+            <p class="form-notification form-notification-arrival form-notificaton-alert">Мы не можем отправить
+              вас в прошлое.</p>
+            <label class="modal-booking-form-label modal-booking-form-label-departure" for="departure">Дата
+              Выезда:</label>
+            <input class="modal-booking-form-input modal-booking-form-date modal-booking-form-date-departure"
+              type="text" name="departure-date" id="departure" placeholder="Укажите дату" value="1 сентября 2023">
+            <p class="form-notification form-notification-departure">На эти даты есть свободные номера. Пока
+              есть.</p>
+            <label class="modal-booking-form-label modal-booking-form-label-lot modal-booking-form-label-adult"
+              for="adult">Взрослые:</label>
+            <div class="modal-booking-form-lot-wrapper modal-booking-form-adult">
+              <button class="modal-booking-form-counter modal-booking-form-minus">
+                <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2"
+                  viewBox="0 0 14 2" fill="currentcolor">
+                  <path d="M0 0L0 2L14 2V0L0 0Z" />
+                </svg>
+              </button>
+              <input class="modal-booking-form-input modal-booking-form-lot" type="number" name="adult" id="adult"
+                placeholder="0" max="999">
+              <button class="modal-booking-form-counter modal-booking-form-plus">
+                <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                  viewBox="0 0 14 14" fill="currentcolor">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                </svg>
+              </button>
             </div>
-            <div class="modal-booking-out">
-              <label class="modal-booking-form-label">Дата Выезда:</label>
-              <input class="modal-booking-form-input modal-booking-form-date" type="date" placeholder="Укажите дату"
-                value="2023-09-01">
-              <span class="form-notification form-notificaton-notify">На эти даты есть свободные номера. Пока
-                есть.</span>
-            </div>
-            <div class="modal-booking-lot">
-              <label class="modal-booking-form-label modal-booking-form-label-lot">Взрослые:</label>
-              <div class="modal-booking-form-lot-wrapper">
-                <button class="modal-booking-form-minus">
-                  <svg class="modal-booking-form-icon-minus" xmlns="http://www.w3.org/2000/svg" width="15" height="2"
-                    viewBox="0 0 15 2" fill="currentcolor">
-                    <path d="M0.392822 0L0.392822 2L14.3928 2V0L0.392822 0Z" />
-                  </svg>
-                </button>
-                <input class="modal-booking-form-input modal-booking-form-lot" type="number" placeholder="0">
-                <button class="modal-booking-form-plus">
-                  <svg class="modal-booking-form-icon-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                    viewBox="0 0 14 14" fill="currentcolor">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                  </svg>
-                </button>
-              </div>
-              <span class="modal-booking-form-label modal-booking-form-label-lot modal-booking-form-children">
-                <label class="modal-booking-form-label">Дети:</label>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
-                    <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="2" height="12"
-                      viewBox="0 0 2 12" fill="currentcolor">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" />
-                    </svg>
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей,
-                    которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                </span>
+            <span class="modal-booking-form-label modal-booking-form-label-lot modal-booking-form-label-children">
+              <label class="modal-booking-form-label" for="children">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей,
+                  которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </span>
-              <div class="modal-booking-form-lot-wrapper">
-                <button class="modal-booking-form-minus">
-                  <svg class="modal-booking-form-icon-minus" xmlns="http://www.w3.org/2000/svg" width="15" height="2"
-                    viewBox="0 0 15 2" fill="currentcolor">
-                    <path d="M0.392822 0L0.392822 2L14.3928 2V0L0.392822 0Z" />
-                  </svg>
-                </button>
-                <input class="modal-booking-form-input modal-booking-form-lot" type="number" placeholder="0">
-                <button class="modal-booking-form-plus">
-                  <svg class="modal-booking-form-icon-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                    viewBox="0 0 14 14" fill="currentcolor">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                  </svg>
-                </button>
-              </div>
+            </span>
+            <div class="modal-booking-form-lot-wrapper modal-booking-form-children">
+              <button class="modal-booking-form-counter modal-booking-form-minus">
+                <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2"
+                  viewBox="0 0 14 2" fill="currentcolor">
+                  <path d="M0 0L0 2L14 2V0L0 0Z" />
+                </svg>
+              </button>
+              <input class="modal-booking-form-input modal-booking-form-lot" type="number" name="children" id="children"
+                placeholder="0" max="999">
+              <button class="modal-booking-form-counter modal-booking-form-plus">
+                <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                  viewBox="0 0 14 14" fill="currentcolor">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                </svg>
+              </button>
             </div>
             <button class="sub-btn modal-booking-btn" type="submit">Найти</button>
           </form>
