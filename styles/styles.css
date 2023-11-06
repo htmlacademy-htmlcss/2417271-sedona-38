@@ -50,13 +50,40 @@ body {
   overflow: hidden;
 }
 
-/* состояния кнопок */
+/* основные кнопки и их состояния */
 .sub-btn,
 .designer-btn,
 .control,
 .btn-view,
 .select-control {
   cursor: pointer;
+}
+
+.main-btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  background-color: #756157;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.sub-btn {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  padding: 8px 50px;
+  border: none;
+  border-radius: 4px;
 }
 
 .main-btn:hover,
@@ -82,6 +109,7 @@ body {
 .sub-btn:disabled {
   background-color: #E5E5E5;
   color: #FFFFFF;
+  cursor: not-allowed;
 }
 
 .active-btn:hover,
@@ -96,6 +124,7 @@ body {
 .active-btn:disabled {
   background-color: #E5E5E5;
   color: #FFFFFF;
+  cursor: not-allowed;
 }
 
 .designer-btn:hover {
@@ -113,6 +142,7 @@ body {
 
 .designer-btn:disabled {
   opacity: 0.1;
+  cursor: not-allowed;
 }
 
 /* ---header--- */
@@ -279,15 +309,10 @@ li + .special-nav-btn {
 }
 
 .btn-modal {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  background-color: #756157;
   max-width: 250px;
   color: inherit;
-  padding: 8px 34px;
+  padding-left: 34px;
   padding-right: 35px;
-  border-radius: 4px;
 }
 
 
@@ -502,15 +527,9 @@ li + .special-nav-btn {
 }
 
 .btn-catalog {
-  color: #FFFFFF;
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: #756157;
   display: inline-block;
-  border-radius: 4px;
   padding: 8px 50px;
   margin: 0 auto;
 }
@@ -559,17 +578,10 @@ li + .special-nav-btn {
 }
 
 .subscribe-submit-btn {
-  font-family: inherit;
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #82B3D3;
   max-width: 300px;
-  border: none;
   border-radius: 0 4px 4px 0;
-  padding: 8px 50px;
 }
 
 /* subscribe extra-style for index-page*/
@@ -668,7 +680,7 @@ li + .special-nav-btn {
 
 /* ---catalog--- */
 /* main-header */
-.catalog-main-header {
+.main-catalog-header {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
@@ -681,7 +693,7 @@ li + .special-nav-btn {
   margin-bottom: 49px;
 }
 
-.catalog-main-header h1 {
+.main-catalog-header h1 {
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
@@ -989,17 +1001,7 @@ li + .special-nav-btn {
 }
 
 .catalog-filter-submit-btn {
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #82B3D3;
   max-width: 200px;
-  padding: 8px 50px;
-  border: none;
-  border-radius: 4px;
 }
 
 .catalog-filter-reset-btn {
@@ -1065,6 +1067,7 @@ li + .special-nav-btn {
 .select-control:disabled {
   border-color: #000000;
   opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .view-list {
@@ -1187,33 +1190,11 @@ li + .special-nav-btn {
 }
 
 .more-info-about {
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #756157;
   padding: 8px 26px;
-  border-radius: 4px;
 }
 
 .favorite-list-adder {
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #82B3D3;
   padding: 8px 20px;
-  border-radius: 4px;
-  border: none;
 }
 
 .active-btn {
@@ -1383,6 +1364,7 @@ li + .special-nav-btn {
 .modal-close-btn:disabled {
   background-color: #E6E6E6;
   color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
 }
 
 /* основная часть */
@@ -1493,6 +1475,7 @@ li + .special-nav-btn {
 .modal-booking-form-input:disabled {
   background-color: #E6E6E6;
   color: rgba(0, 0, 0, 0.6);
+  cursor: not-allowed;
 }
 
 .modal-booking-form-date {
@@ -1573,20 +1556,14 @@ li + .special-nav-btn {
 .modal-booking-form-counter:disabled {
   color: rgba(0, 0, 0, 0.2);
   background-color: #E6E6E6;
+  cursor: not-allowed;
 }
 
 .modal-booking-btn {
-  font-family: inherit;
   font-size: 20px;
-  font-weight: 700;
   line-height: 24px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #83B3D3;
   padding: 18px 77px;
   border-radius: 10px;
-  border: none;
   grid-area: modal-btn;
 }
 
