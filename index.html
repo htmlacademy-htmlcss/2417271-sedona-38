@@ -12,7 +12,7 @@
   <body>
     <div class="page-container">
 
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <a class="logo" href="index.html" aria-current="page">
           <img src="images/logo.svg" width="140" height="70" alt="Логотип городка Седона">
         </a>
@@ -46,12 +46,12 @@
           </ul>
         </nav>
       </header>
-      <main class="main-index main-flex">
-        <header class="main-header">
+      <main class="main-index main-flex" data-test="main">
+        <header class="main-header" data-test="hero">
           <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
           <img class="welcome-pic" src="images/welcome-to-sedona.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona - 'Because the Grand Canyon sucks!'">
         </header>
-        <section class="advantages lead-adv">
+        <section class="advantages lead-adv" data-test="advantages">
           <div class="lead-adv-text-container">
             <h2 class="visually-hidden">Преимущества</h2>
             <p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
@@ -86,7 +86,7 @@
             </li>
           </ul>
         </section>
-        <section class="advantages adv-service">
+        <section class="advantages adv-service" data-test="service">
           <div class="adv-service-text-container">
             <h2 class="visually-hidden">Услуги</h2>
             <p class="slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
@@ -107,12 +107,12 @@
             </li>
           </ul>
         </section>
-        <section class="booking">
+        <section class="booking" data-test="search">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="main-btn btn-catalog" href="catalog.html">Поиск гостиницы в Седоне</a>
         </section>
-        <section class="subscribe extra-subscribe">
+        <section class="subscribe extra-subscribe" data-test="subscribe">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -122,7 +122,7 @@
           </form>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="social-list">
