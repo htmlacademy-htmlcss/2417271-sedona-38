@@ -234,7 +234,7 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  max-width: 348px;
+  max-width: 360px;
 }
 
 .user-navigation-item {
@@ -611,7 +611,8 @@ li + .special-nav-btn {
   margin: 0;
   padding: 0;
   display: flex;
-  min-width: 142px;
+  flex-wrap: wrap;
+  max-width: 250px;
 }
 
 .social-list-item {
@@ -628,7 +629,10 @@ li + .special-nav-btn {
 }
 
 .footer-contacts {
-  max-width: 720px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -686,7 +690,7 @@ li + .special-nav-btn {
   color: #FFFFFF;
   background-color: #82B3D3;
   background-image: url(../images/catalog-main-header-bg.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 35px 70px 70px;
@@ -903,6 +907,7 @@ li + .special-nav-btn {
 
 .control-input-price::-webkit-outer-spin-button,
 .control-input-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -1041,6 +1046,7 @@ li + .special-nav-btn {
 }
 
 .select-control {
+  -webkit-appearance: none;
   appearance: none;
   box-sizing: border-box;
   font-family: inherit;
@@ -1075,7 +1081,9 @@ li + .special-nav-btn {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  max-width: 350px;
 }
 
 .btn-view {
@@ -1248,6 +1256,7 @@ li + .special-nav-btn {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -1394,43 +1403,67 @@ li + .special-nav-btn {
 }
 
 .modal-booking-form-label-arrival {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: label-in;
 }
 
 .modal-booking-form-date-arrival {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: form-in;
 }
 
 .form-notification-arrival {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: note-in;
 }
 
 .modal-booking-form-label-departure {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: label-out;
 }
 
 .modal-booking-form-date-departure {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: form-out;
 }
 
 .form-notification-departure {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: note-out;
 }
 
 .modal-booking-form-label-adult {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: label-adult;
 }
 
 .modal-booking-form-adult {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
   grid-area: form-adult;
 }
 
 .modal-booking-form-label-children {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
   grid-area: label-child;
   justify-self: end;
 }
 
 .modal-booking-form-children {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
   grid-area: form-child;
 }
 
@@ -1499,6 +1532,7 @@ li + .special-nav-btn {
 
 .modal-booking-form-lot::-webkit-outer-spin-button,
 .modal-booking-form-lot::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -1560,6 +1594,9 @@ li + .special-nav-btn {
 }
 
 .modal-booking-btn {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   font-size: 20px;
   line-height: 24px;
   padding: 18px 77px;
