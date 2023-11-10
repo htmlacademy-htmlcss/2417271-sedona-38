@@ -1080,6 +1080,9 @@ li + .special-nav-btn {
 .select-control:disabled {
   border-color: #000000;
   opacity: 0.3;
+}
+
+  .select-control:disabled {
   cursor: not-allowed;
 }
 
