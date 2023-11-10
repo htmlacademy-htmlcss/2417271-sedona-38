@@ -308,7 +308,7 @@ li + .special-nav-btn {
   margin-left: 19px;
 }
 
-.btn-modal {
+.btn-modal-nav {
   max-width: 250px;
   color: inherit;
   padding-left: 34px;
@@ -580,7 +580,7 @@ li + .special-nav-btn {
 .subscribe-submit-btn {
   font-size: 20px;
   line-height: 36px;
-  max-width: 300px;
+  max-width: 350px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -808,13 +808,10 @@ li + .special-nav-btn {
 }
 
 /* чекбоксы и радио*/
-.control-label {
-  padding-left: 36px;
-}
-
 .control {
   position: relative;
   display: block;
+  padding-left: 36px;
 }
 
 .control-mark {
@@ -1384,10 +1381,14 @@ li + .special-nav-btn {
 .modal-close-btn:disabled {
   background-color: #E6E6E6;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-btn:disabled {
   cursor: not-allowed;
 }
 
-/* основная часть */
+
+/* основная часть модального окна*/
 .modal-title {
   font-size: 30px;
   font-weight: 700;
@@ -1409,8 +1410,8 @@ li + .special-nav-btn {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 137px 1fr;
- grid-template-rows: repeat(2, minmax(48px, auto));
- align-items: center;
+  grid-template-rows: repeat(2, minmax(48px, auto));
+  align-items: center;
 }
 
 .modal-booking-form-lot-container {
