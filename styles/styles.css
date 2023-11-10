@@ -757,6 +757,11 @@ li + .special-nav-btn {
   opacity: 1;
 }
 
+.breadcrumbs-link[aria-current="page"]:hover,
+.breadcrumbs-link[aria-current="page"]:focus {
+  opacity: 1;
+}
+
 .breadcrumbs-link:active {
   opacity: 0.3;
 }
