@@ -1401,26 +1401,42 @@ li + .special-nav-btn {
 
 .modal-booking-form {
   display: grid;
-  grid-template-columns: 137px 110px 1fr 110px;
+  grid-template-columns: 247px 1fr;
+  column-gap: 15px;
+  /* grid-template-columns: 137px 110px 1fr 110px;
   grid-auto-rows: minmax(48px, auto);
+  align-items: center; */
+}
+
+.modal-booking-form-container {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 137px 1fr;
+ grid-template-rows: repeat(2, minmax(48px, auto));
+ align-items: center;
+}
+
+.modal-booking-form-lot-container {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  grid-template-rows: repeat(2, minmax(48px, auto));
+  column-gap: 46px;
   align-items: center;
 }
 
 .modal-booking-form-label {
-  grid-column: 1/2;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
 }
 
+
 .modal-booking-form-input {
-  grid-column: 2/-1;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
-  box-sizing: border-box;
   padding: 13px 40px 11px 20px;
   border: none;
   border-radius: 4px;
@@ -1459,12 +1475,12 @@ li + .special-nav-btn {
 
 .form-notification {
   grid-column: 1/-1;
+  align-self: start;
   font-size: 16px;
   line-height: 21px;
   padding-left: 157px;
   margin: 0;
   padding-top: 4px;
-  align-self: start;
 }
 
 .form-notificaton-alert {
@@ -1484,7 +1500,7 @@ li + .special-nav-btn {
 
 .modal-booking-form-lot {
   -moz-appearance: textfield;
-  width: 110px;
+  width: 30px;
   padding: 13px 40px 11px;
   text-align: center;
 }
@@ -1535,25 +1551,18 @@ li + .special-nav-btn {
 }
 
 .modal-booking-btn {
-  grid-column: 1/-1;
   font-size: 20px;
   line-height: 24px;
   padding: 18px 77px;
-  margin-top: 48px;
   border-radius: 10px;
-}
-
-.form-notification + .modal-booking-btn {
-  margin-top: 0;
+  grid-column: 1/-1;
 }
 
 /* тултип */
 .modal-booking-form-label-children {
   position: relative;
-  grid-column: 3/4;
   justify-self: end;
-  margin-left: 10px;
-  margin-right: 83px;
+  margin-right: 37px;
 }
 
 .tooltip {
