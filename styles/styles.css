@@ -50,13 +50,40 @@ body {
   overflow: hidden;
 }
 
-/* состояния кнопок */
+/* основные кнопки и их состояния */
 .sub-btn,
 .designer-btn,
 .control,
 .btn-view,
 .select-control {
   cursor: pointer;
+}
+
+.main-btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  background-color: #756157;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.sub-btn {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  padding: 8px 50px;
+  border: none;
+  border-radius: 4px;
 }
 
 .main-btn:hover,
@@ -82,6 +109,7 @@ body {
 .sub-btn:disabled {
   background-color: #E5E5E5;
   color: #FFFFFF;
+  cursor: not-allowed;
 }
 
 .active-btn:hover,
@@ -96,6 +124,7 @@ body {
 .active-btn:disabled {
   background-color: #E5E5E5;
   color: #FFFFFF;
+  cursor: not-allowed;
 }
 
 .designer-btn:hover {
@@ -113,6 +142,7 @@ body {
 
 .designer-btn:disabled {
   opacity: 0.1;
+  cursor: not-allowed;
 }
 
 /* ---header--- */
@@ -204,7 +234,7 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  max-width: 348px;
+  max-width: 360px;
 }
 
 .user-navigation-item {
@@ -229,18 +259,17 @@ body {
   min-width: 44px;
   min-height: 64px;
   padding: 22px 12px;
-  border: 2px solid transparent;
 }
 
 .btn-search {
   background-image: url(../images/icon-search.svg);
-  background-position: center;
+  background-position: top 22px left 11px;
   background-repeat: no-repeat;
 }
 
 .btn-favorite {
   background-image: url(../images/icon-favorit.svg);
-  background-position: center;
+  background-position: top 22px left 11px;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -251,7 +280,7 @@ body {
 
 .nav-btn-icon:focus,
 .nav-btn-icon:active {
-  border-color: rgba(0, 0, 0, 0.3);
+  outline: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .favorite-list-counter {
@@ -276,18 +305,14 @@ body {
 }
 
 li + .special-nav-btn {
-  margin-left: 20px;
+  margin-left: 19px;
 }
 
-.btn-modal {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  background-color: #756157;
+.btn-modal-nav {
   max-width: 250px;
   color: inherit;
-  padding: 8px 34px;
-  border-radius: 4px;
+  padding-left: 34px;
+  padding-right: 35px;
 }
 
 
@@ -303,7 +328,7 @@ li + .special-nav-btn {
   background-size: auto, cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 51px 371px 82px;
+  padding: 51px 371px 77px;
 }
 
 .welcome-pic {
@@ -326,7 +351,8 @@ li + .special-nav-btn {
 }
 
 .lead-adv-text-container {
-  padding: 69px 200px;
+  padding: 0 200px;
+  margin: 69px 0 90px;
 }
 
 .lead-adv-text-container p {
@@ -338,7 +364,8 @@ li + .special-nav-btn {
 }
 
 .adv-service-text-container {
-  padding: 64px 340px;
+  padding: 0 341px;
+  margin: 64px 0;
 }
 
 .adv-service-text-container p {
@@ -455,28 +482,28 @@ li + .special-nav-btn {
 }
 
 .adv-service-item h3 {
-  margin: 0 auto 30px;
+  margin: 0 auto 29px;
 }
 
 .adv-service-item h3::before {
   content: "";
   display: block;
   width: 76px;
-  height: 76px;
-  margin: 0 auto 28px;
+  height: 77px;
+  margin: 0 auto 29px;
   background-image: url(../images/adv-service-icon.svg);
 }
 
 .adv-service-home h3::before {
-  background-position: -133px -18px;
+  background-position: -133px -17px;
 }
 
 .adv-service-food h3::before {
-  background-position: -258px -19px;
+  background-position: -257px -16px;
 }
 
 .adv-service-present h3::before {
-  background-position: -14px -20px;
+  background-position: -13px -19px;
 }
 
 /* Промо-секция для поиска гостиниц */
@@ -500,15 +527,9 @@ li + .special-nav-btn {
 }
 
 .btn-catalog {
-  color: #FFFFFF;
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: #756157;
   display: inline-block;
-  border-radius: 4px;
   padding: 8px 50px;
   margin: 0 auto;
 }
@@ -530,7 +551,7 @@ li + .special-nav-btn {
 
 .subscribe p {
   width: 475px;
-  margin: 0 auto 54px;
+  margin: 0 auto 55px;
 }
 
 .subscribe-form {
@@ -545,7 +566,7 @@ li + .special-nav-btn {
   line-height: 24px;
   color: #000000;
   background-color: #F2F2F2;
-  width: 452px;
+  width: 412px;
   padding: 12px 20px;
   border: none;
   border-radius: 4px 0 0 4px;
@@ -557,17 +578,10 @@ li + .special-nav-btn {
 }
 
 .subscribe-submit-btn {
-  font-family: inherit;
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #82B3D3;
-  max-width: 300px;
-  border: none;
+  max-width: 350px;
   border-radius: 0 4px 4px 0;
-  padding: 8px 50px;
 }
 
 /* subscribe extra-style for index-page*/
@@ -589,8 +603,7 @@ li + .special-nav-btn {
   color: #000000;
   text-align: center;
   display: flex;
-  padding: 40px 70px 30px;
-  justify-content: space-between;
+  padding: 45px 70px 35px;
 }
 
 .social-list {
@@ -598,7 +611,8 @@ li + .special-nav-btn {
   margin: 0;
   padding: 0;
   display: flex;
-  min-width: 145px;
+  flex-wrap: wrap;
+  max-width: 250px;
 }
 
 .social-list-item {
@@ -608,11 +622,18 @@ li + .special-nav-btn {
 .btn-social {
   color: #83B3D3;
   width: 27px;
-  padding: 10px;
+  padding: 11px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-contacts {
-  max-width: 720px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
 .footer-contacts-phone {
@@ -624,9 +645,8 @@ li + .special-nav-btn {
 }
 
 .about-developer {
-  display: flex;
-  width: 120px;
-  align-items: center;
+  width: 115px;
+  padding-top: 3px;
 }
 
 .about-developer-contacts {
@@ -664,7 +684,7 @@ li + .special-nav-btn {
 
 /* ---catalog--- */
 /* main-header */
-.catalog-main-header {
+.main-catalog-header {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
@@ -672,12 +692,12 @@ li + .special-nav-btn {
   background-image: url(../images/catalog-main-header-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   padding: 35px 70px 70px;
-  margin-bottom: 50px;
+  margin-bottom: 49px;
 }
 
-.catalog-main-header h1 {
+.main-catalog-header h1 {
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
@@ -737,6 +757,11 @@ li + .special-nav-btn {
   opacity: 1;
 }
 
+.breadcrumbs-link[aria-current="page"]:hover,
+.breadcrumbs-link[aria-current="page"]:focus {
+  opacity: 1;
+}
+
 .breadcrumbs-link:active {
   opacity: 0.3;
 }
@@ -749,7 +774,7 @@ li + .special-nav-btn {
 .catalog-filter-group {
   border: none;
   padding: 0;
-  margin: 0 70px 0 0;
+  margin: 0 71px 3px 0;
 }
 
 .catalog-filter-group:last-child {
@@ -760,6 +785,7 @@ li + .special-nav-btn {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  padding: 0;
   margin-bottom: 32px;
 }
 
@@ -767,6 +793,10 @@ li + .special-nav-btn {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.catalog-filter-group-item {
+  max-width: 145px;
 }
 
 .catalog-filter-group-item:not(:last-child) {
@@ -778,13 +808,10 @@ li + .special-nav-btn {
 }
 
 /* чекбоксы и радио*/
-.control-label {
-  padding-left: 36px;
-}
-
 .control {
   position: relative;
   display: block;
+  padding-left: 36px;
 }
 
 .control-mark {
@@ -886,6 +913,7 @@ li + .special-nav-btn {
 
 .control-input-price::-webkit-outer-spin-button,
 .control-input-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -900,7 +928,7 @@ li + .special-nav-btn {
   box-sizing: border-box;
   background-color: #F2F2F2;
   width: 143px;
-  padding: 12px 40px 12px 20px;
+  padding: 13px 40px 11px 20px;
   border: none;
 }
 
@@ -980,20 +1008,11 @@ li + .special-nav-btn {
   flex-direction: column;
   justify-content: flex-end;
   gap: 32px;
+  margin-bottom: 0;
 }
 
 .catalog-filter-submit-btn {
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #82B3D3;
   max-width: 200px;
-  padding: 8px 50px;
-  border: none;
-  border-radius: 4px;
 }
 
 .catalog-filter-reset-btn {
@@ -1028,11 +1047,13 @@ li + .special-nav-btn {
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
+  max-width: 500px;
   margin: 0;
   margin-right: auto;
 }
 
 .select-control {
+  -webkit-appearance: none;
   appearance: none;
   box-sizing: border-box;
   font-family: inherit;
@@ -1041,10 +1062,10 @@ li + .special-nav-btn {
   color: #333333;
   margin-right: 70px;
   width: 292px;
-  padding: 12px 35px 12px 20px;
+  padding: 13px 35px 11px 18px;
   background-color: transparent;
   background-image: url(../images/select-arrow.svg);
-  background-position: right 20px center;
+  background-position: right 18px top 19px;
   background-repeat: no-repeat;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1059,6 +1080,7 @@ li + .special-nav-btn {
 .select-control:disabled {
   border-color: #000000;
   opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .view-list {
@@ -1066,7 +1088,9 @@ li + .special-nav-btn {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  max-width: 160px;
 }
 
 .btn-view {
@@ -1113,11 +1137,11 @@ li + .special-nav-btn {
   line-height: 21px;
   list-style: none;
   padding: 0 0 40px;
-  margin: 0 0 40px;
+  margin: 0 0 38px;
   border-bottom: 1px solid #E6E6E6;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 18px 20px;
 }
 
 .catalog-list-item {
@@ -1125,7 +1149,7 @@ li + .special-nav-btn {
   box-sizing: border-box;
   border-radius: 4px;
   width: 340px;
-  padding: 20px;
+  padding: 20px 19px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 212px 1fr;
@@ -1181,33 +1205,11 @@ li + .special-nav-btn {
 }
 
 .more-info-about {
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #756157;
   padding: 8px 26px;
-  border-radius: 4px;
 }
 
 .favorite-list-adder {
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #82B3D3;
   padding: 8px 20px;
-  border-radius: 4px;
-  border: none;
 }
 
 .active-btn {
@@ -1261,6 +1263,7 @@ li + .special-nav-btn {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -1286,8 +1289,8 @@ li + .special-nav-btn {
   text-decoration: none;
   display: block;
   border-radius: 4px;
-  padding: 12px 15px;
-  min-width: 60px;
+  padding: 11px 15px;
+  min-width: 58px;
 }
 
 .pagination-item-current {
@@ -1298,6 +1301,9 @@ li + .special-nav-btn {
 }
 
 .pagination-separator {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
   color: #000000;
   background-color: transparent;
   border: none;
@@ -1327,6 +1333,7 @@ li + .special-nav-btn {
 
 .modal-active {
   display: flex;
+  z-index: 1;
 }
 
 .modal {
@@ -1376,7 +1383,12 @@ li + .special-nav-btn {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* основная часть */
+.modal-close-btn:disabled {
+  cursor: not-allowed;
+}
+
+
+/* основная часть модального окна*/
 .modal-title {
   font-size: 30px;
   font-weight: 700;
@@ -1390,57 +1402,24 @@ li + .special-nav-btn {
 
 .modal-booking-form {
   display: grid;
-  grid-template-columns: 137px 110px 1fr 110px;
-  grid-template-rows: repeat(7, minmax(48px, auto));
-  grid-template-areas: "label-in form-in form-in form-in"
-    ". note-in note-in note-in"
-    "label-out form-out form-out form-out"
-    ". note-out note-out note-out"
-    "label-adult form-adult label-child form-child"
-    ". . . ."
-    "modal-btn modal-btn modal-btn modal-btn";
+  grid-template-columns: 247px 1fr;
+  column-gap: 50px;
+}
+
+.modal-booking-form-container {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 137px 1fr;
+  grid-template-rows: repeat(2, minmax(48px, auto));
   align-items: center;
 }
 
-.modal-booking-form-label-arrival {
-  grid-area: label-in;
-}
-
-.modal-booking-form-date-arrival {
-  grid-area: form-in;
-}
-
-.form-notification-arrival {
-  grid-area: note-in;
-}
-
-.modal-booking-form-label-departure {
-  grid-area: label-out;
-}
-
-.modal-booking-form-date-departure {
-  grid-area: form-out;
-}
-
-.form-notification-departure {
-  grid-area: note-out;
-}
-
-.modal-booking-form-label-adult {
-  grid-area: label-adult;
-}
-
-.modal-booking-form-adult {
-  grid-area: form-adult;
-}
-
-.modal-booking-form-label-children {
-  grid-area: label-child;
-  justify-self: end;
-}
-
-.modal-booking-form-children {
-  grid-area: form-child;
+.modal-booking-form-lot-container {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  grid-template-rows: repeat(2, minmax(48px, auto));
+  column-gap: 46px;
+  align-items: center;
 }
 
 .modal-booking-form-label {
@@ -1450,14 +1429,13 @@ li + .special-nav-btn {
   color: #000000;
 }
 
+
 .modal-booking-form-input {
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
-  box-sizing: border-box;
-  width: 440px;
-  padding: 12px 40px 12px 20px;
+  padding: 13px 40px 11px 20px;
   border: none;
   border-radius: 4px;
   background-color: #F2F2F2;
@@ -1484,6 +1462,7 @@ li + .special-nav-btn {
 .modal-booking-form-input:disabled {
   background-color: #E6E6E6;
   color: rgba(0, 0, 0, 0.6);
+  cursor: not-allowed;
 }
 
 .modal-booking-form-date {
@@ -1493,11 +1472,13 @@ li + .special-nav-btn {
 }
 
 .form-notification {
+  grid-column: 1/-1;
+  align-self: start;
   font-size: 16px;
   line-height: 21px;
-  padding-left: 20px;
+  padding-left: 157px;
   margin: 0;
-  align-self: start;
+  padding-top: 4px;
 }
 
 .form-notificaton-alert {
@@ -1506,6 +1487,7 @@ li + .special-nav-btn {
 
 .modal-booking-form-lot::-webkit-outer-spin-button,
 .modal-booking-form-lot::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -1516,8 +1498,8 @@ li + .special-nav-btn {
 
 .modal-booking-form-lot {
   -moz-appearance: textfield;
-  width: 110px;
-  padding: 14px 40px;
+  width: 30px;
+  padding: 13px 40px 11px;
   text-align: center;
 }
 
@@ -1563,28 +1545,22 @@ li + .special-nav-btn {
 .modal-booking-form-counter:disabled {
   color: rgba(0, 0, 0, 0.2);
   background-color: #E6E6E6;
+  cursor: not-allowed;
 }
 
 .modal-booking-btn {
-  font-family: inherit;
   font-size: 20px;
-  font-weight: 700;
   line-height: 24px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #83B3D3;
   padding: 18px 77px;
   border-radius: 10px;
-  border: none;
-  grid-area: modal-btn;
+  grid-column: 1/-1;
 }
 
 /* тултип */
 .modal-booking-form-label-children {
   position: relative;
-  margin-left: 10px;
-  margin-right: 82px;
+  justify-self: end;
+  margin-right: 37px;
 }
 
 .tooltip {
@@ -1620,8 +1596,8 @@ li + .special-nav-btn {
   line-height: 20px;
   color: #FFFFFF;
   background-color: #333333;
-  width: 220px;
-  padding: 15px 18px;
+  width: 216px;
+  padding: 20px 18px 23px 22px;
   border-radius: 10px;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
   display: none;

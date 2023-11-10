@@ -5,25 +5,27 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
 
   <body>
     <div class="page-container">
 
-      <header class="page-header">
-        <a href="index.html" aria-current="page" class="logo">
+      <header class="page-header" data-test="header">
+        <a class="logo" href="index.html" aria-current="page">
           <img src="images/logo.svg" width="140" height="70" alt="Логотип городка Седона">
         </a>
         <nav class="page-navigation">
           <ul class="navigation-list">
-            <li class="navigation-item ">
-              <a href="index.html" aria-current="page" class="navigation-link current-nav-link">Главная</a>
+            <li class="navigation-item">
+              <a class="navigation-link current-nav-link" href="index.html" aria-current="page">Главная</a>
             </li>
             <li class="navigation-item">
-              <a href="#" class="navigation-link">О Седоне</a>
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a href="catalog.html" class="navigation-link">Гостиницы</a>
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="user-navigation">
@@ -39,18 +41,18 @@
               </a>
             </li>
             <li class="user-navigation-item special-nav-btn">
-              <a class="main-btn btn-modal" href="#">Хочу сюда!</a>
+              <a class="main-btn btn-modal-nav js-btn-modal" href="modal.html">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
       </header>
-      <main class="main-index main-flex">
-        <header class="main-header">
+      <main class="main-index main-flex" data-test="main">
+        <header class="main-header" data-test="hero">
           <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
           <img class="welcome-pic" src="images/welcome-to-sedona.svg" width="458" height="352"
-            alt="Welcome to the gorgeous Sedona - 'Because the Grand Canyon sucks!">
+            alt="Welcome to the gorgeous Sedona - 'Because the Grand Canyon sucks!'">
         </header>
-        <section class="advantages lead-adv">
+        <section class="advantages lead-adv" data-test="advantages">
           <div class="lead-adv-text-container">
             <h2 class="visually-hidden">Преимущества</h2>
             <p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
@@ -69,16 +71,16 @@
               <p>Все достопримечательности находятся очень близко</p>
             </li>
             <li class="adv-item adv-medium-bg">
-              <h3>Красивая дорога</h3>
+              <h3>Красивая<br> дорога</h3>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="adv-item adv-light-bg">
-              <h3>Мало туристов</h3>
+              <h3>Мало<br> туристов</h3>
               <p>Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="adv-item adv-dark-bg adv-with-pic">
               <div class="adv-with-pic-text-container">
-                <h3>Там есть мост дьявола</h3>
+                <h3>Там есть<br> мост дьявола</h3>
                 <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img class="adv-pic adv-pic-reverse" src="images/adv-pic-devil-bridge.jpg" width="800" height="385"
@@ -86,7 +88,7 @@
             </li>
           </ul>
         </section>
-        <section class="advantages adv-service">
+        <section class="advantages adv-service" data-test="service">
           <div class="adv-service-text-container">
             <h2 class="visually-hidden">Услуги</h2>
             <p class="slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
@@ -95,35 +97,35 @@
           <ul class="adv-list adv-service-list">
             <li class="adv-service-item adv-service-home">
               <h3>Жильё</h3>
-              <p>Рекомендуем пожить</br> в настоящем мотеле, всё как в кино!</p>
+              <p>Рекомендуем пожить в&nbsp;настоящем мотеле,<br> всё как в кино!</p>
             </li>
             <li class="adv-service-item adv-service-food">
               <h3>Еда</h3>
-              <p>Всегда заказывайте</br> топовый фирменный бургер, вы не разочаруетесь!</p>
+              <p>Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="adv-service-item adv-service-present">
               <h3>Сувениры</h3>
-              <p>Не только китайского,</br> но и настоящего местного производства!</p>
+              <p>Не только китайского, но&nbsp;и&nbsp;настоящего местного производства!</p>
             </li>
           </ul>
         </section>
-        <section class="booking">
+        <section class="booking" data-test="search">
           <h2>Заинтересовались?</h2>
-          <p>Укажите предполагаемые даты поездки,</br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a href="catalog.html" class="main-btn btn-catalog">Поиск гостиницы в Седоне</a>
+          <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <a class="main-btn btn-catalog js-btn-modal" href="catalog.html">Поиск гостиницы в Седоне</a>
         </section>
-        <section class="subscribe extra-subscribe">
+        <section class="subscribe extra-subscribe" data-test="subscribe">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-field">Ваш e-mail</label>
-            <input class="subscribe-form-input" type="email" name="subscribe-mail" id="subscribe-field" required
-              placeholder="Ваш e-mail">
+            <input class="subscribe-form-input" id="subscribe-field" type="email" name="subscribe-mail"
+              placeholder="Ваш e-mail" required>
             <button class="sub-btn subscribe-submit-btn" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="social-list">
@@ -198,11 +200,11 @@
     </div>
     <!-- Что бы включить модальное окно, добавь к modal-container класс modal-active -->
     <div class="modal-container">
-      <div class="modal modal-booking">
+      <div class="modal modal-booking" data-test="modal">
         <button class="modal-close-btn">
           <span class="visually-hidden">Закрыть</span>
           <svg class="modal-close-btn-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-            viewBox="0 0 15 15" fill="currentcolor">
+            viewBox="0 0 15 15" fill="currentcolor" role="img" aria-label="Закрыть модальное окно">
             <path
               d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" />
           </svg>
@@ -210,64 +212,69 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-booking-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="modal-booking-form-label modal-booking-form-label-arrival" for="arrival">Дата Заезда:</label>
-            <input class="modal-booking-form-input modal-booking-form-date modal-booking-form-date-arrival" type="text"
-              name="arrival-date" id="arrival" placeholder="Укажите дату" value="27 апреля 2020">
-            <p class="form-notification form-notification-arrival form-notificaton-alert">Мы не можем отправить
-              вас в прошлое.</p>
-            <label class="modal-booking-form-label modal-booking-form-label-departure" for="departure">Дата
-              Выезда:</label>
-            <input class="modal-booking-form-input modal-booking-form-date modal-booking-form-date-departure"
-              type="text" name="departure-date" id="departure" placeholder="Укажите дату" value="1 сентября 2023">
-            <p class="form-notification form-notification-departure">На эти даты есть свободные номера. Пока
-              есть.</p>
-            <label class="modal-booking-form-label modal-booking-form-label-lot modal-booking-form-label-adult"
-              for="adult">Взрослые:</label>
-            <div class="modal-booking-form-lot-wrapper modal-booking-form-adult">
-              <button class="modal-booking-form-counter modal-booking-form-minus">
-                <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2"
-                  viewBox="0 0 14 2" fill="currentcolor">
-                  <path d="M0 0L0 2L14 2V0L0 0Z" />
-                </svg>
-              </button>
-              <input class="modal-booking-form-input modal-booking-form-lot" type="number" name="adult" id="adult"
-                placeholder="0" max="999">
-              <button class="modal-booking-form-counter modal-booking-form-plus">
-                <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                  viewBox="0 0 14 14" fill="currentcolor">
-                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                </svg>
-              </button>
+            <div class="modal-booking-form-container">
+              <label class="modal-booking-form-label" for="arrival">Дата Заезда:</label>
+              <input class="modal-booking-form-input modal-booking-form-date" id="arrival" type="text"
+                name="arrival-date" placeholder="Укажите дату" value="27 апреля 2020" required>
+              <p class="form-notification form-notificaton-alert">Мы не можем отправить вас в прошлое.</p>
             </div>
-            <span class="modal-booking-form-label modal-booking-form-label-lot modal-booking-form-label-children">
-              <label class="modal-booking-form-label" for="children">Дети:</label>
-              <span class="tooltip">
-                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
-                <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей,
-                  которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            <div class="modal-booking-form-container">
+              <label class="modal-booking-form-label" for="departure">Дата Выезда:</label>
+              <input class="modal-booking-form-input modal-booking-form-date" id="departure" type="text"
+                name="departure-date" placeholder="Укажите дату" value="1 сентября 2023" required>
+              <p class="form-notification">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+            <div class="modal-booking-form-lot-container">
+              <label class="modal-booking-form-label modal-booking-form-label-lot" for="adult">Взрослые:</label>
+              <div class="modal-booking-form-lot-wrapper">
+                <button class="modal-booking-form-counter modal-booking-form-minus js-form-adult-minus" type="button">
+                  <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2"
+                    viewBox="0 0 14 2" fill="currentcolor" role="img" aria-label="Уменьшить число гостей">
+                    <path d="M0 0L0 2L14 2V0L0 0Z" />
+                  </svg>
+                </button>
+                <input class="modal-booking-form-input modal-booking-form-lot js-form-adult-lot" id="adult"
+                  type="number" name="adult" placeholder="0" max="999" value="2" required>
+                <button class="modal-booking-form-counter modal-booking-form-plus js-form-adult-plus" type="button">
+                  <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 14 14" fill="currentcolor" role="img" aria-label="Увеличить число гостей">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="modal-booking-form-lot-container">
+              <span class="modal-booking-form-label modal-booking-form-label-lot modal-booking-form-label-children">
+                <label class="modal-booking-form-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей,
+                    которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
               </span>
-            </span>
-            <div class="modal-booking-form-lot-wrapper modal-booking-form-children">
-              <button class="modal-booking-form-counter modal-booking-form-minus">
-                <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2"
-                  viewBox="0 0 14 2" fill="currentcolor">
-                  <path d="M0 0L0 2L14 2V0L0 0Z" />
-                </svg>
-              </button>
-              <input class="modal-booking-form-input modal-booking-form-lot" type="number" name="children" id="children"
-                placeholder="0" max="999">
-              <button class="modal-booking-form-counter modal-booking-form-plus">
-                <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                  viewBox="0 0 14 14" fill="currentcolor">
-                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                </svg>
-              </button>
+              <div class="modal-booking-form-lot-wrapper">
+                <button class="modal-booking-form-counter modal-booking-form-minus js-form-child-minus" type="button">
+                  <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2"
+                    viewBox="0 0 14 2" fill="currentcolor" role="img" aria-label="Уменьшить число гостей">
+                    <path d="M0 0L0 2L14 2V0L0 0Z" />
+                  </svg>
+                </button>
+                <input class="modal-booking-form-input modal-booking-form-lot js-form-child-lot" id="children"
+                  type="number" name="children" placeholder="0" max="999" value="2" required>
+                <button class="modal-booking-form-counter modal-booking-form-plus js-form-child-plus" type="button">
+                  <svg class="modal-booking-form-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 14 14" fill="currentcolor" role="img" aria-label="Увеличить число гостей">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                  </svg>
+                </button>
+              </div>
             </div>
             <button class="sub-btn modal-booking-btn" type="submit">Найти</button>
           </form>
         </section>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 
 </html>
