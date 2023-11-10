@@ -1082,7 +1082,7 @@ li + .special-nav-btn {
   opacity: 0.3;
 }
 
-  .select-control:disabled {
+.select-control:disabled {
   cursor: not-allowed;
 }
 
