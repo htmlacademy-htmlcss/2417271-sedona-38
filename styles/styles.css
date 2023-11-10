@@ -1402,47 +1402,24 @@ li + .special-nav-btn {
 }
 
 .modal-booking-form-label {
+  grid-column: 1/2;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
-  grid-column: 1/2;
-}
-
-.modal-booking-form-label-adult {
-  margin-top: 12px;
-  margin-bottom: 60px;
-}
-
-.modal-booking-form-label-children {
-  justify-self: end;
-  grid-column: 3/4;
-  margin-top: 12px;
-  margin-bottom: 60px;
 }
 
 .modal-booking-form-input {
+  grid-column: 2/-1;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   box-sizing: border-box;
-  width: 440px;
   padding: 13px 40px 11px 20px;
   border: none;
   border-radius: 4px;
   background-color: #F2F2F2;
-  grid-column: 2/-1;
-}
-
-.modal-booking-form-adult {
-  grid-column: 2/3;
-  align-self: start;
-}
-
-.modal-booking-form-children {
-  grid-column: 4/5;
-  align-self: start;
 }
 
 .modal-booking-form-input::placeholder {
@@ -1476,13 +1453,13 @@ li + .special-nav-btn {
 }
 
 .form-notification {
+  grid-column: 1/-1;
   font-size: 16px;
   line-height: 21px;
   padding-left: 157px;
   margin: 0;
   padding-top: 4px;
   align-self: start;
-  grid-column: 1/-1;
 }
 
 .form-notificaton-alert {
@@ -1553,20 +1530,23 @@ li + .special-nav-btn {
 }
 
 .modal-booking-btn {
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-column: 1/-1;
-  /* grid-row: -2/-1; */
   font-size: 20px;
   line-height: 24px;
   padding: 18px 77px;
+  margin-top: 48px;
   border-radius: 10px;
+}
+
+.form-notification + .modal-booking-btn {
+  margin-top: 0;
 }
 
 /* тултип */
 .modal-booking-form-label-children {
   position: relative;
+  grid-column: 3/4;
+  justify-self: end;
   margin-left: 10px;
   margin-right: 83px;
 }
