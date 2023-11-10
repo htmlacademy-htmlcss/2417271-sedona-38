@@ -587,7 +587,7 @@ li + .special-nav-btn {
 /* subscribe extra-style for index-page*/
 .extra-subscribe {
   color: #FFFFFF;
-  background-color: #82B3D3;
+  background-color: #756157;
   background-image: url(../images/index-subscribe-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -688,7 +688,7 @@ li + .special-nav-btn {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
-  background-color: #82B3D3;
+  background-color: #756157;
   background-image: url(../images/catalog-main-header-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -1080,6 +1080,9 @@ li + .special-nav-btn {
 .select-control:disabled {
   border-color: #000000;
   opacity: 0.3;
+}
+
+.select-control:disabled {
   cursor: not-allowed;
 }
 
