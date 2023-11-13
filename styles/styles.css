@@ -398,9 +398,6 @@ li + .special-nav-btn {
   box-sizing: border-box;
   padding: 100px 84px;
   min-height: 385px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .adv-item h3::after {
